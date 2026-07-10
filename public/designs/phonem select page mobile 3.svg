@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 423.14 717.28">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f3f3f3;
+      }
+
+      .cls-2, .cls-3 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-2, .cls-4 {
+        font-size: 21px;
+      }
+
+      .cls-5, .cls-6 {
+        font-family: ArialRoundedMTBold, 'Arial Rounded MT Bold';
+      }
+
+      .cls-7 {
+        font-size: 18px;
+      }
+
+      .cls-7, .cls-8 {
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+      }
+
+      .cls-9 {
+        letter-spacing: 0em;
+      }
+
+      .cls-10 {
+        letter-spacing: 0em;
+      }
+
+      .cls-6 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-11 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-8 {
+        fill: #231f20;
+        font-size: 12px;
+      }
+
+      .cls-12 {
+        letter-spacing: 0em;
+      }
+
+      .cls-13 {
+        letter-spacing: .01em;
+      }
+
+      .cls-14, .cls-4 {
+        fill: #010101;
+      }
+    </style>
+  </defs>
+  <text class="cls-8" transform="translate(0 33.7)"><tspan x="0" y="0">]</tspan></text>
+  <text class="cls-2" transform="translate(96.67 224.38)"><tspan x="0" y="0">256GB</tspan></text>
+  <text class="cls-2" transform="translate(96.9 260.7)"><tspan x="0" y="0">128GB</tspan></text>
+  <text class="cls-4" transform="translate(60.33 18.14)"><tspan class="cls-3" x="0" y="0">Select </tspan><tspan class="cls-5" x="64.2" y="0">C</tspan><tspan class="cls-6" x="79.74" y="0">a</tspan><tspan class="cls-5" x="91.95" y="0">pacity</tspan></text>
+  <g>
+    <rect class="cls-14" x="57.66" y="33.59" width="164.68" height="2.9"/>
+    <path class="cls-14" d="M221.84,34.09v1.9H58.16v-1.9h163.68M222.84,33.09H57.16v3.9h165.68v-3.9h0Z"/>
+  </g>
+  <rect class="cls-1" x="86.27" y="164.31" width="85.5" height="31.25"/>
+  <rect class="cls-14" x="86.25" y="162.85" width="4" height="34.17" transform="translate(176.5 359.87) rotate(180)"/>
+  <text class="cls-2" transform="translate(97.87 187.21)"><tspan x="0" y="0">512GB</tspan></text>
+  <text/>
+  <text/>
+  <text class="cls-7" transform="translate(339.39 704.18)"><tspan class="cls-11" x="0" y="0">P</tspan><tspan class="cls-10" x="9.29" y="0">r</tspan><tspan x="14.99" y="0" xml:space="preserve">ev  | N</tspan><tspan class="cls-12" x="60.26" y="0">e</tspan><tspan class="cls-13" x="69.23" y="0">x</tspan><tspan class="cls-9" x="77.79" y="0">t</tspan></text>
+  <rect class="cls-14" x="356.06" y="691.38" width="1.55" height="34.17" transform="translate(-351.62 1065.3) rotate(-90)"/>
+  <rect class="cls-14" x="404.81" y="691.6" width="1.55" height="34.17" transform="translate(-303.1 1114.27) rotate(-90)"/>
+</svg>

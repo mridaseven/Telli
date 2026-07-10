@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 653.76 894.77">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #231f20;
+      }
+
+      .cls-1, .cls-2 {
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 18px;
+      }
+
+      .cls-3 {
+        fill: #f3f3f3;
+      }
+
+      .cls-4 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-5, .cls-6 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-5, .cls-7 {
+        font-size: 21px;
+      }
+
+      .cls-8 {
+        font-family: ArialRoundedMTBold, 'Arial Rounded MT Bold';
+      }
+
+      .cls-9 {
+        letter-spacing: 0em;
+      }
+
+      .cls-10 {
+        letter-spacing: 0em;
+      }
+
+      .cls-11 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-12 {
+        letter-spacing: 0em;
+      }
+
+      .cls-13 {
+        letter-spacing: .01em;
+      }
+
+      .cls-14, .cls-7 {
+        fill: #010101;
+      }
+    </style>
+  </defs>
+  <text class="cls-5" transform="translate(10.42 220.37)"><tspan x="0" y="0">Iphone 16 Pro </tspan></text>
+  <text class="cls-5" transform="translate(9.65 248.69)"><tspan x="0" y="0">Iphone 16 </tspan></text>
+  <text class="cls-5" transform="translate(11.12 277.56)"><tspan x="0" y="0">Iphone 15 Pro Max</tspan></text>
+  <text class="cls-5" transform="translate(11.12 309.37)"><tspan x="0" y="0">Iphone 15 Pro</tspan></text>
+  <text class="cls-5" transform="translate(12.89 343.55)"><tspan x="0" y="0">Iphone 15 </tspan></text>
+  <text class="cls-5" transform="translate(12.12 373.85)"><tspan x="0" y="0">Iphone 14 Pro Max</tspan></text>
+  <text class="cls-5" transform="translate(12.89 404.16)"><tspan x="0" y="0">Iphone 14 Pro </tspan></text>
+  <text class="cls-5" transform="translate(13.89 435.96)"><tspan x="0" y="0">Iphone 14 </tspan></text>
+  <text class="cls-5" transform="translate(15.65 469.16)"><tspan x="0" y="0">Iphone 13 Pro Max</tspan></text>
+  <text class="cls-5" transform="translate(15.65 499.61)"><tspan x="0" y="0">Iphone 13 Pro</tspan></text>
+  <text class="cls-5" transform="translate(15.65 529.47)"><tspan x="0" y="0">Iphone 13</tspan></text>
+  <text class="cls-7" transform="translate(26.65 18.14)"><tspan class="cls-6" x="0" y="0">Select </tspan><tspan class="cls-8" x="64.2" y="0">iPhone</tspan></text>
+  <g>
+    <rect class="cls-14" x="9.66" y="33.93" width="164.68" height="2.9"/>
+    <path class="cls-14" d="M173.84,34.43v1.9H10.16v-1.9h163.68M174.84,33.43H9.16v3.9h165.68v-3.9h0Z"/>
+  </g>
+  <rect class="cls-3" x=".02" y="163.31" width="230.24" height="31.25"/>
+  <rect class="cls-14" y="161.84" width="4" height="34.17" transform="translate(4 357.86) rotate(180)"/>
+  <text class="cls-5" transform="translate(11.62 186.21)"><tspan x="0" y="0">Iphone 16 Pro Max</tspan></text>
+  <text class="cls-2" transform="translate(285.4 695.38)"><tspan class="cls-11" x="0" y="0">P</tspan><tspan class="cls-10" x="9.29" y="0">r</tspan><tspan x="14.99" y="0" xml:space="preserve">ev  | N</tspan><tspan class="cls-12" x="60.26" y="0">e</tspan><tspan class="cls-13" x="69.23" y="0">x</tspan><tspan class="cls-9" x="77.79" y="0">t</tspan></text>
+  <text/>
+  <text class="cls-1" transform="translate(570.59 890.27)"><tspan class="cls-4" x="0" y="0">L</tspan><tspan x="8.24" y="0">o</tspan><tspan class="cls-10" x="18.13" y="0">r</tspan><tspan x="23.83" y="0">em ipsu</tspan></text>
+  <rect class="cls-14" x="302.07" y="682.57" width="1.55" height="34.17" transform="translate(-396.8 1002.5) rotate(-90)"/>
+  <rect class="cls-14" x="350.82" y="682.79" width="1.55" height="34.17" transform="translate(-348.28 1051.47) rotate(-90)"/>
+</svg>

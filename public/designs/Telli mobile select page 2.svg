@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 372.83 711.81">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f3f3f3;
+      }
+
+      .cls-2, .cls-3 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-2, .cls-4 {
+        font-size: 21px;
+      }
+
+      .cls-5 {
+        font-family: ArialRoundedMTBold, 'Arial Rounded MT Bold';
+      }
+
+      .cls-6 {
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 18px;
+      }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
+
+      .cls-8 {
+        letter-spacing: 0em;
+      }
+
+      .cls-9 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-10 {
+        letter-spacing: 0em;
+      }
+
+      .cls-11 {
+        letter-spacing: .01em;
+      }
+
+      .cls-12, .cls-4 {
+        fill: #010101;
+      }
+    </style>
+  </defs>
+  <text class="cls-2" transform="translate(10.42 220.37)"><tspan x="0" y="0">White</tspan></text>
+  <text class="cls-2" transform="translate(9.65 248.69)"><tspan x="0" y="0">Gold</tspan></text>
+  <text class="cls-2" transform="translate(11.12 277.56)"><tspan x="0" y="0">Rose</tspan></text>
+  <text class="cls-2" transform="translate(11.12 309.37)"><tspan x="0" y="0">Dark Blue</tspan></text>
+  <text class="cls-4" transform="translate(26.65 18.14)"><tspan class="cls-3" x="0" y="0">Select </tspan><tspan class="cls-5" x="64.2" y="0">Color</tspan></text>
+  <g>
+    <rect class="cls-12" x="9.66" y="33.93" width="164.68" height="2.9"/>
+    <path class="cls-12" d="M173.84,34.43v1.9H10.16v-1.9h163.68M174.84,33.43H9.16v3.9h165.68v-3.9h0Z"/>
+  </g>
+  <rect class="cls-1" x=".02" y="163.31" width="230.24" height="31.25"/>
+  <rect class="cls-12" y="161.84" width="4" height="34.17" transform="translate(4 357.86) rotate(180)"/>
+  <text class="cls-2" transform="translate(11.62 186.21)"><tspan x="0" y="0">Spacegrey</tspan></text>
+  <text/>
+  <text/>
+  <text class="cls-6" transform="translate(289.08 698.72)"><tspan class="cls-9" x="0" y="0">P</tspan><tspan class="cls-8" x="9.29" y="0">r</tspan><tspan x="14.99" y="0" xml:space="preserve">ev  | N</tspan><tspan class="cls-10" x="60.26" y="0">e</tspan><tspan class="cls-11" x="69.23" y="0">x</tspan><tspan class="cls-7" x="77.79" y="0">t</tspan></text>
+  <rect class="cls-12" x="305.75" y="685.91" width="1.55" height="34.17" transform="translate(-396.46 1009.52) rotate(-90)"/>
+  <rect class="cls-12" x="354.5" y="686.13" width="1.55" height="34.17" transform="translate(-347.94 1058.49) rotate(-90)"/>
+</svg>
