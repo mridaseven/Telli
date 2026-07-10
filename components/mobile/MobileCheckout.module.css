@@ -1,0 +1,94 @@
+.page {
+  min-height: 100vh;
+  background-color: var(--color-white);
+  padding: 18px 16px 80px;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.backLink {
+  font-family: var(--font-ui);
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+.brand {
+  font-family: var(--font-body);
+  font-size: var(--font-size-nav);
+  color: var(--color-text-muted);
+}
+
+.checkoutSection {
+  max-width: 360px;
+}
+
+.checkoutTitle {
+  font-family: var(--font-body);
+  font-size: var(--font-size-list-mobile);
+  color: var(--color-text-dark);
+  margin-bottom: 8px;
+}
+
+.checkoutUnderline {
+  width: 100%;
+  max-width: 242px;
+  height: var(--input-underline-height);
+  background-color: var(--color-text-dark);
+  margin-bottom: 24px;
+}
+
+.selectionSummary {
+  font-family: var(--font-body);
+  font-size: var(--font-size-small);
+  color: var(--color-gray);
+  margin-bottom: 24px;
+}
+
+.checkoutForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sendBtn {
+  position: relative;
+  align-self: flex-start;
+  font-family: var(--font-ui);
+  font-size: var(--font-size-button);
+  color: var(--color-text-dark);
+  padding-bottom: 6px;
+  margin-top: 16px;
+}
+
+.sendUnderline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1.3px;
+  background-color: var(--color-text-dark);
+}
+
+.confirmation {
+  position: fixed;
+  bottom: 24px;
+  left: 16px;
+  right: 16px;
+  background: var(--color-text-dark);
+  color: var(--color-white);
+  padding: 16px 20px;
+  font-family: var(--font-body);
+  font-size: var(--font-size-nav);
+  z-index: 100;
+}
+
+.confirmClose {
+  margin-top: 8px;
+  text-decoration: underline;
+  font-size: var(--font-size-small);
+}

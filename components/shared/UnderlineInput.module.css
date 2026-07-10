@@ -1,0 +1,42 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.label {
+  font-family: var(--font-body);
+  color: var(--color-gray);
+  margin-bottom: 4px;
+}
+
+.input {
+  width: 100%;
+  padding: 4px 0 6px;
+  color: var(--color-text-dark);
+}
+
+.underline {
+  height: var(--input-underline-height);
+  background-color: var(--color-gray);
+  width: 100%;
+}
+
+.desktop .label,
+.desktop .input {
+  font-size: var(--font-size-list-desktop);
+}
+
+.desktop .field {
+  width: 242px;
+}
+
+.mobile .label,
+.mobile .input {
+  font-size: var(--font-size-list-mobile);
+}
+
+.mobile .field {
+  width: 100%;
+  max-width: 320px;
+}

@@ -1,0 +1,7 @@
+/* Mobile-specific global overrides */
+
+@media (max-width: 767px) {
+  body {
+    background-color: var(--color-white);
+  }
+}

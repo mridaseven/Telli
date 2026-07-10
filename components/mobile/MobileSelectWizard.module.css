@@ -1,0 +1,89 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--color-white);
+  padding: 18px 16px 80px;
+}
+
+.topBar {
+  margin-bottom: 8px;
+}
+
+.backLink {
+  font-family: var(--font-ui);
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+.step {
+  margin-top: 8px;
+}
+
+.sectionHeader {
+  margin-bottom: 16px;
+}
+
+.sectionTitle {
+  font-size: var(--font-size-list-mobile);
+  color: var(--color-text-dark);
+  margin-bottom: 12px;
+}
+
+.titleRegular {
+  font-family: var(--font-body);
+}
+
+.titleBold {
+  font-family: var(--font-rounded);
+}
+
+.titleUnderline {
+  width: 165px;
+  height: var(--title-underline-height);
+  background-color: var(--color-text-dark);
+}
+
+.navButtons {
+  position: fixed;
+  bottom: 24px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navBtn {
+  font-family: var(--font-ui);
+  font-size: var(--font-size-button);
+  color: var(--color-text-dark);
+  padding: 4px 0;
+}
+
+.navBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.navDivider {
+  font-family: var(--font-ui);
+  font-size: var(--font-size-button);
+  color: var(--color-text-dark);
+}
+
+.navLinePrev,
+.navLineNext {
+  position: absolute;
+  bottom: -4px;
+  width: 1.5px;
+  height: 34px;
+  background-color: var(--color-text-dark);
+  transform: rotate(-90deg);
+}
+
+.navLinePrev {
+  right: 68px;
+}
+
+.navLineNext {
+  right: 16px;
+}
