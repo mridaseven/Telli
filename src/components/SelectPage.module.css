@@ -1,0 +1,350 @@
+.page {
+  min-height: 100vh;
+  background: #fff;
+  color: #010101;
+}
+
+/* ── Desktop layout (Phonem select page.svg / Telli select page.svg) ── */
+.desktop {
+  display: none;
+  padding: 120px 96px 80px;
+}
+
+.selectSection {
+  max-width: 700px;
+  margin: 0 auto 200px;
+}
+
+.sectionTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.sectionTitleBold {
+  font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
+}
+
+.titleUnderline {
+  width: 165px;
+  height: 3px;
+  background: #010101;
+  margin: 0 auto 200px;
+}
+
+.columns {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.column {
+  list-style: none;
+}
+
+.columnModels {
+  width: 230px;
+}
+
+.columnColors {
+  width: 136px;
+}
+
+.columnCapacity {
+  width: 104px;
+}
+
+.listItem {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 2;
+  padding: 2px 0 2px 16px;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+}
+
+.listItemSelected {
+  background: #f2f2f2;
+}
+
+.listItemSelected::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 34px;
+  background: #010101;
+}
+
+.desktopNav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
+  max-width: 700px;
+  margin: 60px auto 0;
+  font-family: "Myriad Pro", Myriad, Arial, sans-serif;
+  font-size: 24px;
+  transform: scaleX(1.1);
+}
+
+.desktopNav button {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.desktopNav button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #010101;
+}
+
+.checkoutSection {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.checkoutTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.checkoutUnderline {
+  width: 242px;
+  height: 2px;
+  background: #010101;
+  margin: 0 auto 60px;
+}
+
+.formRow {
+  display: flex;
+  gap: 90px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.formField {
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+}
+
+.formFieldNarrow {
+  flex: 0 0 242px;
+}
+
+.formLabel {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: gray;
+  letter-spacing: -0.06em;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.formInput {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: #010101;
+  padding-bottom: 4px;
+  border-bottom: 2px solid gray;
+}
+
+.formInput:focus {
+  border-bottom-color: #010101;
+}
+
+.sendButton {
+  display: block;
+  margin-left: auto;
+  margin-top: 40px;
+  font-family: "Myriad Pro", Myriad, Arial, sans-serif;
+  font-size: 24px;
+  transform: scaleX(1.1);
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.sendButton::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1.3px;
+  background: #010101;
+}
+
+/* ── Mobile layout (step-by-step) ── */
+.mobile {
+  display: block;
+  padding: 18px 10px 30px;
+  min-height: 100vh;
+}
+
+.mobileHeader {
+  margin-bottom: 15px;
+}
+
+.mobileTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 21px;
+  color: #010101;
+  margin-left: 16px;
+}
+
+.mobileTitleBold {
+  font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
+}
+
+.mobileTitleUnderline {
+  width: 165px;
+  height: 3px;
+  background: #010101;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.mobileList {
+  list-style: none;
+  margin-top: 130px;
+}
+
+.mobileListItem {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 21px;
+  line-height: 2.2;
+  padding: 4px 0 4px 12px;
+  cursor: pointer;
+  position: relative;
+}
+
+.mobileListItemSelected {
+  background: #f3f3f3;
+}
+
+.mobileListItemSelected::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 34px;
+  background: #010101;
+}
+
+.mobileNav {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-family: "Myriad Pro", Myriad, Arial, sans-serif;
+  font-size: 18px;
+  display: flex;
+  gap: 8px;
+}
+
+.mobileNav button {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.mobileNavDivider {
+  margin: 0 4px;
+}
+
+.mobileCheckout {
+  margin-top: 60px;
+}
+
+.mobileCheckout .mobileTitleUnderline {
+  margin-bottom: 40px;
+}
+
+.mobileFormField {
+  margin-bottom: 36px;
+}
+
+.mobileFormLabel {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 21px;
+  color: gray;
+  letter-spacing: -0.06em;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.mobileFormInput {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 21px;
+  color: #010101;
+  padding-bottom: 4px;
+  border-bottom: 2px solid gray;
+}
+
+.mobileFormInput:focus {
+  border-bottom-color: #010101;
+}
+
+.mobileFormRow {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.mobileFormRow .mobileFormField {
+  flex: 1;
+  min-width: 120px;
+}
+
+.mobileSend {
+  display: block;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  font-family: "Myriad Pro", Myriad, Arial, sans-serif;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.mobileSend::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1.3px;
+  background: #010101;
+}
+
+.mobileLorem {
+  position: fixed;
+  bottom: 16px;
+  left: 10px;
+  font-family: "Myriad Pro", Myriad, Arial, sans-serif;
+  font-size: 12px;
+  color: #231f20;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 1024px) {
+  .desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+}
