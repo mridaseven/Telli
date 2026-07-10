@@ -1,0 +1,184 @@
+.page {
+  min-height: 100vh;
+  background-color: var(--color-white);
+  padding-bottom: 80px;
+}
+
+.topBar {
+  padding: 24px 48px;
+}
+
+.brand {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--font-size-nav);
+  color: var(--color-text-dark);
+}
+
+.selectorSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 48px 0;
+}
+
+.sectionHeader {
+  margin-bottom: 32px;
+}
+
+.sectionTitle {
+  font-size: var(--font-size-list-desktop);
+  color: var(--color-text-dark);
+  margin-bottom: 12px;
+}
+
+.titleRegular {
+  font-family: var(--font-body);
+  font-weight: normal;
+}
+
+.titleBold {
+  font-family: var(--font-rounded);
+  font-weight: normal;
+}
+
+.titleUnderline {
+  width: 165px;
+  height: var(--title-underline-height);
+  background-color: var(--color-text-dark);
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 48px;
+  min-height: 520px;
+}
+
+.column {
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.columnActive {
+  opacity: 1;
+}
+
+.navButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 48px;
+  margin-top: 32px;
+  padding-right: 24px;
+}
+
+.navBtn {
+  position: relative;
+  font-family: var(--font-ui);
+  font-size: var(--font-size-checkout);
+  color: var(--color-text-dark);
+  padding-bottom: 6px;
+}
+
+.navBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.navUnderline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1.5px;
+  background-color: var(--color-text-dark);
+}
+
+.checkoutSection {
+  max-width: 1200px;
+  margin: 80px auto 0;
+  padding: 0 48px;
+}
+
+.checkoutTitle {
+  font-family: var(--font-body);
+  font-size: var(--font-size-list-desktop);
+  color: var(--color-text-dark);
+  margin-bottom: 8px;
+}
+
+.checkoutUnderline {
+  width: 242px;
+  height: var(--input-underline-height);
+  background-color: var(--color-text-dark);
+  margin-bottom: 40px;
+}
+
+.checkoutForm {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.formRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+
+.sendBtn {
+  position: relative;
+  align-self: flex-end;
+  font-family: var(--font-ui);
+  font-size: var(--font-size-checkout);
+  color: var(--color-text-dark);
+  padding-bottom: 6px;
+  margin-top: 16px;
+}
+
+.sendUnderline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1.3px;
+  background-color: var(--color-text-dark);
+}
+
+.confirmation {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: var(--color-text-dark);
+  color: var(--color-white);
+  padding: 20px 24px;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: var(--font-size-nav);
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.confirmationDetail {
+  margin-top: 8px;
+  font-size: var(--font-size-small);
+  opacity: 0.85;
+}
+
+.confirmClose {
+  margin-top: 12px;
+  text-decoration: underline;
+  font-size: var(--font-size-small);
+}
+
+@media (max-width: 900px) {
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    min-height: auto;
+  }
+
+  .formRow {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
