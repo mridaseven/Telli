@@ -10,6 +10,14 @@
   display: none;
   min-height: 100vh;
   position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  /* Smaller, cleaner desktop sizes — same font families */
+  --font-brand: 16px;
+  --font-headline: 34px;
+  --font-cta: 18px;
 }
 
 .header {
@@ -25,9 +33,8 @@
 
 .brand {
   font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
-  font-size: 19px;
+  font-size: var(--font-brand);
   font-weight: 700;
-  -webkit-font-smoothing: antialiased;
 }
 
 .nav {
@@ -35,8 +42,7 @@
   align-items: center;
   gap: 0;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 19px;
-  -webkit-font-smoothing: antialiased;
+  font-size: var(--font-brand);
 }
 
 .navDivider {
@@ -52,11 +58,10 @@
 
 .headline {
   font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
-  font-size: 42px;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  font-size: var(--font-headline);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
 }
 
 .ctaGroup {
@@ -67,18 +72,17 @@
 .launch {
   display: inline-block;
   font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
-  font-size: 22px;
+  font-size: var(--font-cta);
   position: relative;
   padding-bottom: 7px;
-  -webkit-font-smoothing: antialiased;
 }
 
 .launchUnderline {
   position: absolute;
-  left: -2px;
+  left: 0;
   bottom: 0;
-  width: 88px;
-  height: 2.5px;
+  width: 72px;
+  height: 2px;
   background: #fff;
 }
 
@@ -89,6 +93,13 @@
   background: #fff;
   color: #231f20;
   position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  --font-brand: 17px;
+  --font-nav: 17px;
+  --font-welcome: 28px;
 }
 
 .mobileFrame {
@@ -115,8 +126,9 @@
 .mobileBrand {
   margin-top: 253px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 21px;
-  letter-spacing: -0.11em;
+  font-size: var(--font-brand);
+  font-weight: 500;
+  letter-spacing: 0;
 }
 
 .mobileNav {
@@ -124,12 +136,14 @@
   flex-direction: column;
   align-items: center;
   margin-top: 28px;
-  gap: 45px;
+  gap: 36px;
 }
 
 .mobileNavItem {
   font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
-  font-size: 21px;
+  font-size: var(--font-nav);
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 
 .mobileNavItemLaunch {
@@ -140,8 +154,9 @@
   margin-top: auto;
   padding-bottom: 15px;
   font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
-  font-size: 36px;
-  letter-spacing: -0.02em;
+  font-size: var(--font-welcome);
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 @media (min-width: 1024px) {

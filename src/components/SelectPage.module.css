@@ -9,7 +9,13 @@
   display: none;
   padding: 100px 80px 72px;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+
+  /* Smaller, cleaner desktop sizes — same font families */
+  --font-title: 18px;
+  --font-body: 16px;
+  --font-label: 14px;
 }
 
 .selectSection {
@@ -19,7 +25,7 @@
 
 .sectionTitle {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 22px;
+  font-size: var(--font-title);
   text-align: center;
   margin-bottom: 14px;
 }
@@ -59,9 +65,9 @@
 
 .listItem {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 21px;
-  line-height: 1.85;
-  padding: 3px 0 3px 15px;
+  font-size: var(--font-body);
+  line-height: 1.7;
+  padding: 4px 0 4px 14px;
   cursor: pointer;
   position: relative;
   white-space: nowrap;
@@ -77,8 +83,8 @@
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 4px;
-  height: 30px;
+  width: 3px;
+  height: 22px;
   background: #010101;
 }
 
@@ -89,7 +95,7 @@
   max-width: 680px;
   margin: 48px auto 0;
   font-family: "Myriad Pro", Myriad, Arial, sans-serif;
-  font-size: 21px;
+  font-size: var(--font-body);
 }
 
 .desktopNav button {
@@ -114,7 +120,7 @@
 
 .checkoutTitle {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 22px;
+  font-size: var(--font-title);
   text-align: center;
   margin-bottom: 14px;
 }
@@ -145,20 +151,21 @@
 
 .formLabel {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 21px;
-  color: gray;
-  letter-spacing: -0.02em;
+  font-size: var(--font-label);
+  color: #777;
+  letter-spacing: 0;
   display: block;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 .formInput {
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 21px;
+  font-size: var(--font-body);
   color: #010101;
-  padding-bottom: 5px;
-  border-bottom: 1.5px solid gray;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #bbb;
+  letter-spacing: 0.01em;
 }
 
 .formInput:focus {
@@ -170,7 +177,7 @@
   margin-left: auto;
   margin-top: 36px;
   font-family: "Myriad Pro", Myriad, Arial, sans-serif;
-  font-size: 21px;
+  font-size: var(--font-body);
   position: relative;
   padding-bottom: 4px;
 }
@@ -190,6 +197,14 @@
   display: block;
   padding: 18px 10px 30px;
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  --font-title: 17px;
+  --font-body: 16px;
+  --font-label: 14px;
+  --font-nav: 15px;
 }
 
 .mobileHeader {
@@ -198,9 +213,11 @@
 
 .mobileTitle {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 21px;
+  font-size: var(--font-title);
   color: #010101;
   margin-left: 16px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
 }
 
 .mobileTitleBold {
@@ -208,23 +225,23 @@
 }
 
 .mobileTitleUnderline {
-  width: 165px;
-  height: 3px;
+  width: 140px;
+  height: 2px;
   background: #010101;
-  margin-top: 15px;
+  margin-top: 12px;
   margin-left: 10px;
 }
 
 .mobileList {
   list-style: none;
-  margin-top: 130px;
+  margin-top: 100px;
 }
 
 .mobileListItem {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 21px;
-  line-height: 2.2;
-  padding: 4px 0 4px 12px;
+  font-size: var(--font-body);
+  line-height: 1.75;
+  padding: 5px 0 5px 12px;
   cursor: pointer;
   position: relative;
 }
@@ -239,8 +256,8 @@
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 4px;
-  height: 34px;
+  width: 3px;
+  height: 24px;
   background: #010101;
 }
 
@@ -249,9 +266,10 @@
   bottom: 20px;
   right: 20px;
   font-family: "Myriad Pro", Myriad, Arial, sans-serif;
-  font-size: 18px;
+  font-size: var(--font-nav);
   display: flex;
   gap: 8px;
+  letter-spacing: 0.02em;
 }
 
 .mobileNav button {
@@ -277,20 +295,21 @@
 
 .mobileFormLabel {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 21px;
-  color: gray;
-  letter-spacing: -0.06em;
+  font-size: var(--font-label);
+  color: #777;
+  letter-spacing: 0;
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .mobileFormInput {
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 21px;
+  font-size: var(--font-body);
   color: #010101;
-  padding-bottom: 4px;
-  border-bottom: 2px solid gray;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #bbb;
+  letter-spacing: 0.01em;
 }
 
 .mobileFormInput:focus {
@@ -314,9 +333,10 @@
   margin-top: 20px;
   margin-bottom: 60px;
   font-family: "Myriad Pro", Myriad, Arial, sans-serif;
-  font-size: 18px;
+  font-size: var(--font-nav);
   position: relative;
   padding-bottom: 4px;
+  letter-spacing: 0.02em;
 }
 
 .mobileSend::after {
