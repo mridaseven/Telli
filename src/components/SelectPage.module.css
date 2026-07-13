@@ -7,35 +7,38 @@
 /* ── Desktop layout (Phonem select page.svg / Telli select page.svg) ── */
 .desktop {
   display: none;
-  padding: 120px 96px 80px;
+  padding: 80px 64px 64px;
 }
 
 .selectSection {
-  max-width: 700px;
-  margin: 0 auto 200px;
+  max-width: 640px;
+  margin: 0 auto 120px;
 }
 
 .sectionTitle {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
+  font-size: 18px;
+  font-weight: 400;
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  letter-spacing: 0.01em;
 }
 
 .sectionTitleBold {
   font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
+  font-weight: 600;
 }
 
 .titleUnderline {
-  width: 165px;
-  height: 3px;
+  width: 132px;
+  height: 2px;
   background: #010101;
-  margin: 0 auto 200px;
+  margin: 0 auto 80px;
 }
 
 .columns {
   display: flex;
-  gap: 40px;
+  gap: 48px;
   justify-content: center;
 }
 
@@ -44,25 +47,26 @@
 }
 
 .columnModels {
-  width: 230px;
+  width: 200px;
 }
 
 .columnColors {
-  width: 136px;
+  width: 120px;
 }
 
 .columnCapacity {
-  width: 104px;
+  width: 88px;
 }
 
 .listItem {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  line-height: 2;
-  padding: 2px 0 2px 16px;
+  font-size: 15px;
+  line-height: 1.75;
+  padding: 4px 0 4px 14px;
   cursor: pointer;
   position: relative;
   white-space: nowrap;
+  letter-spacing: 0.01em;
 }
 
 .listItemSelected {
@@ -75,25 +79,25 @@
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 4px;
-  height: 34px;
+  width: 3px;
+  height: 24px;
   background: #010101;
 }
 
 .desktopNav {
   display: flex;
   justify-content: flex-end;
-  gap: 24px;
-  max-width: 700px;
-  margin: 60px auto 0;
-  font-family: "Myriad Pro", Myriad, Arial, sans-serif;
-  font-size: 24px;
-  transform: scaleX(1.1);
+  gap: 20px;
+  max-width: 640px;
+  margin: 40px auto 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.02em;
 }
 
 .desktopNav button {
   position: relative;
-  padding-bottom: 4px;
+  padding-bottom: 3px;
 }
 
 .desktopNav button::after {
@@ -102,62 +106,65 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 1.5px;
+  height: 1px;
   background: #010101;
 }
 
 .checkoutSection {
-  max-width: 900px;
+  max-width: 720px;
   margin: 0 auto;
 }
 
 .checkoutTitle {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
+  font-size: 18px;
+  font-weight: 400;
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  letter-spacing: 0.01em;
 }
 
 .checkoutUnderline {
-  width: 242px;
+  width: 120px;
   height: 2px;
   background: #010101;
-  margin: 0 auto 60px;
+  margin: 0 auto 48px;
 }
 
 .formRow {
   display: flex;
-  gap: 90px;
-  margin-bottom: 40px;
+  gap: 48px;
+  margin-bottom: 28px;
   flex-wrap: wrap;
 }
 
 .formField {
   position: relative;
   flex: 1;
-  min-width: 200px;
+  min-width: 180px;
 }
 
 .formFieldNarrow {
-  flex: 0 0 242px;
+  flex: 0 0 180px;
 }
 
 .formLabel {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  color: gray;
-  letter-spacing: -0.06em;
+  font-size: 13px;
+  color: #888;
+  letter-spacing: 0.01em;
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
 .formInput {
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
+  font-size: 15px;
   color: #010101;
-  padding-bottom: 4px;
-  border-bottom: 2px solid gray;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #ccc;
+  letter-spacing: 0.01em;
 }
 
 .formInput:focus {
@@ -167,12 +174,12 @@
 .sendButton {
   display: block;
   margin-left: auto;
-  margin-top: 40px;
-  font-family: "Myriad Pro", Myriad, Arial, sans-serif;
-  font-size: 24px;
-  transform: scaleX(1.1);
+  margin-top: 32px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.02em;
   position: relative;
-  padding-bottom: 4px;
+  padding-bottom: 3px;
 }
 
 .sendButton::after {
@@ -181,7 +188,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 1.3px;
+  height: 1px;
   background: #010101;
 }
 
