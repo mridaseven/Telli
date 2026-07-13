@@ -7,38 +7,37 @@
 /* ── Desktop layout (Phonem select page.svg / Telli select page.svg) ── */
 .desktop {
   display: none;
-  padding: 80px 64px 64px;
+  padding: 100px 80px 72px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .selectSection {
-  max-width: 640px;
-  margin: 0 auto 120px;
+  max-width: 680px;
+  margin: 0 auto 160px;
 }
 
 .sectionTitle {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 22px;
   text-align: center;
-  margin-bottom: 12px;
-  letter-spacing: 0.01em;
+  margin-bottom: 14px;
 }
 
 .sectionTitleBold {
   font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
-  font-weight: 600;
 }
 
 .titleUnderline {
-  width: 132px;
-  height: 2px;
+  width: 150px;
+  height: 2.5px;
   background: #010101;
-  margin: 0 auto 80px;
+  margin: 0 auto 140px;
 }
 
 .columns {
   display: flex;
-  gap: 48px;
+  gap: 44px;
   justify-content: center;
 }
 
@@ -47,26 +46,25 @@
 }
 
 .columnModels {
-  width: 200px;
+  width: 220px;
 }
 
 .columnColors {
-  width: 120px;
+  width: 128px;
 }
 
 .columnCapacity {
-  width: 88px;
+  width: 98px;
 }
 
 .listItem {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  line-height: 1.75;
-  padding: 4px 0 4px 14px;
+  font-size: 21px;
+  line-height: 1.85;
+  padding: 3px 0 3px 15px;
   cursor: pointer;
   position: relative;
   white-space: nowrap;
-  letter-spacing: 0.01em;
 }
 
 .listItemSelected {
@@ -79,25 +77,24 @@
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 3px;
-  height: 24px;
+  width: 4px;
+  height: 30px;
   background: #010101;
 }
 
 .desktopNav {
   display: flex;
   justify-content: flex-end;
-  gap: 20px;
-  max-width: 640px;
-  margin: 40px auto 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.02em;
+  gap: 22px;
+  max-width: 680px;
+  margin: 48px auto 0;
+  font-family: "Myriad Pro", Myriad, Arial, sans-serif;
+  font-size: 21px;
 }
 
 .desktopNav button {
   position: relative;
-  padding-bottom: 3px;
+  padding-bottom: 4px;
 }
 
 .desktopNav button::after {
@@ -106,65 +103,62 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 1px;
+  height: 1.3px;
   background: #010101;
 }
 
 .checkoutSection {
-  max-width: 720px;
+  max-width: 860px;
   margin: 0 auto;
 }
 
 .checkoutTitle {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 22px;
   text-align: center;
-  margin-bottom: 12px;
-  letter-spacing: 0.01em;
+  margin-bottom: 14px;
 }
 
 .checkoutUnderline {
-  width: 120px;
+  width: 220px;
   height: 2px;
   background: #010101;
-  margin: 0 auto 48px;
+  margin: 0 auto 52px;
 }
 
 .formRow {
   display: flex;
-  gap: 48px;
-  margin-bottom: 28px;
+  gap: 72px;
+  margin-bottom: 36px;
   flex-wrap: wrap;
 }
 
 .formField {
   position: relative;
   flex: 1;
-  min-width: 180px;
+  min-width: 200px;
 }
 
 .formFieldNarrow {
-  flex: 0 0 180px;
+  flex: 0 0 220px;
 }
 
 .formLabel {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  color: #888;
-  letter-spacing: 0.01em;
+  font-size: 21px;
+  color: gray;
+  letter-spacing: -0.02em;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .formInput {
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 21px;
   color: #010101;
-  padding-bottom: 6px;
-  border-bottom: 1px solid #ccc;
-  letter-spacing: 0.01em;
+  padding-bottom: 5px;
+  border-bottom: 1.5px solid gray;
 }
 
 .formInput:focus {
@@ -174,12 +168,11 @@
 .sendButton {
   display: block;
   margin-left: auto;
-  margin-top: 32px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.02em;
+  margin-top: 36px;
+  font-family: "Myriad Pro", Myriad, Arial, sans-serif;
+  font-size: 21px;
   position: relative;
-  padding-bottom: 3px;
+  padding-bottom: 4px;
 }
 
 .sendButton::after {
@@ -188,7 +181,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 1px;
+  height: 1.3px;
   background: #010101;
 }
 
