@@ -281,7 +281,6 @@ export default function SelectPage({ brand }: SelectPageProps) {
           </nav>
         )}
 
-        <p className={styles.mobileLorem}>Lorem ipsu</p>
       </div>
     </div>
   );

@@ -21,7 +21,6 @@ export default function LandingPage({ brand }: LandingPageProps) {
             <span>Helpdesk</span>
             <span className={styles.navDivider}>|</span>
             <span>About us</span>
-            <span>ipsum</span>
           </nav>
         </header>
 
@@ -34,18 +33,14 @@ export default function LandingPage({ brand }: LandingPageProps) {
               Launch
               <span className={styles.launchUnderline} />
             </Link>
-            <p className={styles.subtitle}>Lorem ipsum</p>
           </div>
         </section>
       </div>
 
       {/* Mobile — Telli Mobile.svg */}
       <div className={styles.mobile}>
-        <p className={styles.mobileTopLabel}>Lorem ipsum</p>
-
         <div className={styles.mobileFrame}>
           <div className={styles.menuButton} aria-hidden="true" />
-          <p className={styles.mobileLorem}>Lorem ipsum</p>
 
           <p className={styles.mobileBrand}>{brandName}</p>
 
@@ -54,7 +49,7 @@ export default function LandingPage({ brand }: LandingPageProps) {
               href={`/${brand}/select`}
               className={styles.mobileNavItemLaunch}
             >
-              | Launch<span className={styles.ipsum}>ipsum</span>
+              | Launch
             </Link>
             <span className={styles.mobileNavItem}>Helpdesk</span>
             <span className={styles.mobileNavItem}>About us</span>

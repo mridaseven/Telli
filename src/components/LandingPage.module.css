@@ -83,14 +83,6 @@
   background: #fff;
 }
 
-.subtitle {
-  font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
-  font-size: 36px;
-  margin-top: 4px;
-  margin-left: 20px;
-  letter-spacing: -0.02em;
-}
-
 /* Mobile layout — matches Telli Mobile.svg (1202×1308) */
 .mobile {
   display: block;
@@ -98,13 +90,6 @@
   background: #fff;
   color: #231f20;
   position: relative;
-}
-
-.mobileTopLabel {
-  font-family: "Myriad Pro", Myriad, Arial, sans-serif;
-  font-size: 12px;
-  padding: 10px 0 0 0;
-  letter-spacing: -0.01em;
 }
 
 .mobileFrame {
@@ -152,29 +137,12 @@
   composes: mobileNavItem;
 }
 
-.mobileNavItemLaunch span {
-  color: #231f20;
-}
-
-.mobileNavItemLaunch .ipsum {
-  color: #231f20;
-}
-
 .mobileWelcome {
   margin-top: auto;
   padding-bottom: 15px;
   font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
   font-size: 36px;
   letter-spacing: -0.02em;
-}
-
-.mobileLorem {
-  position: absolute;
-  top: 313px;
-  right: 80px;
-  font-family: "Myriad Pro", Myriad, Arial, sans-serif;
-  font-size: 12px;
-  letter-spacing: -0.01em;
 }
 
 @media (min-width: 1024px) {
