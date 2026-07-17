@@ -13,9 +13,9 @@
   text-rendering: optimizeLegibility;
 
   /* Smaller, clearer sizes — same font families */
-  --font-title: 16px;
-  --font-body: 14px;
-  --font-label: 12px;
+  --font-title: 17px;
+  --font-body: 15px;
+  --font-label: 13px;
 }
 
 .selectSection {
@@ -205,10 +205,10 @@
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 
-  --font-title: 15px;
-  --font-body: 14px;
-  --font-label: 12px;
-  --font-nav: 13px;
+  --font-title: 16px;
+  --font-body: 15px;
+  --font-label: 13px;
+  --font-nav: 14px;
 }
 
 .mobileHeader {

@@ -15,9 +15,9 @@
   text-rendering: optimizeLegibility;
 
   /* Smaller, clearer sizes — same font families */
-  --font-brand: 14px;
-  --font-headline: 28px;
-  --font-cta: 15px;
+  --font-brand: 15px;
+  --font-headline: 30px;
+  --font-cta: 16px;
 }
 
 .header {
@@ -82,7 +82,7 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 60px;
+  width: 64px;
   height: 1.5px;
   background: #fff;
 }
@@ -98,9 +98,9 @@
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 
-  --font-brand: 15px;
-  --font-nav: 15px;
-  --font-welcome: 24px;
+  --font-brand: 16px;
+  --font-nav: 16px;
+  --font-welcome: 26px;
 }
 
 .mobileFrame {
