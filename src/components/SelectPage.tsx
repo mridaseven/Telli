@@ -14,7 +14,6 @@ import {
 import styles from "./SelectPage.module.css";
 
 type MobileStep = "model" | "color" | "capacity" | "checkout";
-type DesktopDropdown = "model" | "color" | "capacity" | null;
 
 const MOBILE_STEPS: MobileStep[] = ["model", "color", "capacity", "checkout"];
 
@@ -33,7 +32,6 @@ export default function SelectPage() {
     DEFAULT_SELECTION_MOBILE
   );
   const [mobileStep, setMobileStep] = useState<MobileStep>("model");
-  const [openDropdown, setOpenDropdown] = useState<DesktopDropdown>(null);
   const [form, setForm] = useState({
     name: "",
     address: "",
@@ -60,77 +58,49 @@ export default function SelectPage() {
     setForm((prev) => ({ ...prev, [field]: value }));
   };
 
-  const renderDesktopChips = () => {
-    const chips: {
-      key: "model" | "color" | "capacity";
-      value: string;
-      options: readonly string[];
-      field: keyof SelectionState;
-      className: string;
-    }[] = [
-      {
-        key: "model",
-        value: selection.model,
-        options: IPHONE_MODELS_DESKTOP,
-        field: "model",
-        className: styles.chipModel,
-      },
-      {
-        key: "color",
-        value: selection.color,
-        options: COLORS,
-        field: "color",
-        className: styles.chipColor,
-      },
-      {
-        key: "capacity",
-        value: selection.capacity,
-        options: CAPACITIES_DESKTOP,
-        field: "capacity",
-        className: styles.chipCapacity,
-      },
-    ];
-
-    return (
-      <div className={styles.chipRow}>
-        {chips.map((chip) => (
-          <div key={chip.key} className={styles.chipWrapper}>
-            <button
-              type="button"
-              className={`${styles.chip} ${chip.className}`}
-              onClick={() =>
-                setOpenDropdown((current) =>
-                  current === chip.key ? null : chip.key
-                )
-              }
-            >
-              {chip.value}
-            </button>
-            {openDropdown === chip.key && (
-              <ul className={styles.chipDropdown}>
-                {chip.options.map((option) => (
-                  <li
-                    key={option}
-                    className={`${styles.chipOption} ${
-                      selection[chip.field] === option
-                        ? styles.chipOptionSelected
-                        : ""
-                    }`}
-                    onClick={() => {
-                      setSelection((s) => ({ ...s, [chip.field]: option }));
-                      setOpenDropdown(null);
-                    }}
-                  >
-                    {option}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
+  const renderDesktopColumns = () => (
+    <div className={styles.columns}>
+      <ul className={`${styles.column} ${styles.columnModels}`}>
+        {IPHONE_MODELS_DESKTOP.map((model) => (
+          <li
+            key={model}
+            className={`${styles.listItem} ${
+              selection.model === model ? styles.listItemSelected : ""
+            }`}
+            onClick={() => setSelection((s) => ({ ...s, model }))}
+          >
+            {model}
+          </li>
         ))}
-      </div>
-    );
-  };
+      </ul>
+      <ul className={`${styles.column} ${styles.columnColors}`}>
+        {COLORS.map((color) => (
+          <li
+            key={color}
+            className={`${styles.listItem} ${
+              selection.color === color ? styles.listItemSelected : ""
+            }`}
+            onClick={() => setSelection((s) => ({ ...s, color }))}
+          >
+            {color}
+          </li>
+        ))}
+      </ul>
+      <ul className={`${styles.column} ${styles.columnCapacity}`}>
+        {CAPACITIES_DESKTOP.map((capacity) => (
+          <li
+            key={capacity}
+            className={`${styles.listItem} ${
+              selection.capacity === capacity ? styles.listItemSelected : ""
+            }`}
+            onClick={() => setSelection((s) => ({ ...s, capacity }))}
+          >
+            {capacity}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 
   const renderCheckoutForm = (isMobile: boolean) => {
     const fieldClass = isMobile ? styles.mobileFormField : styles.formField;
@@ -234,7 +204,24 @@ export default function SelectPage() {
     <div className={styles.page}>
       {/* Desktop */}
       <div className={styles.desktop}>
-        {renderDesktopChips()}
+        <section className={styles.selectSection}>
+          <h2 className={styles.sectionTitle}>
+            <span>Select </span>
+            <span className={styles.sectionTitleBold}>iPhone</span>
+          </h2>
+          <div className={styles.titleUnderline} />
+          {renderDesktopColumns()}
+          <div className={styles.desktopNav}>
+            <button type="button">Prev</button>
+            <button type="button">Next</button>
+          </div>
+        </section>
+
+        <section className={styles.checkoutSection}>
+          <h2 className={styles.checkoutTitle}>Checkout</h2>
+          <div className={styles.checkoutUnderline} />
+          {renderCheckoutForm(false)}
+        </section>
       </div>
 
       {/* Mobile */}
@@ -288,7 +275,6 @@ export default function SelectPage() {
             </button>
           </nav>
         )}
-
       </div>
     </div>
   );

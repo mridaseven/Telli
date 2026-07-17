@@ -4,85 +4,210 @@
   color: #010101;
 }
 
-/* ── Desktop — white minimal, three chips only ── */
+/* ── Desktop layout (Telli select page.svg — 1853.96×3269.13) ── */
 .desktop {
   display: none;
-  min-height: 100vh;
-  padding: 120px 48px 0;
+  padding: 80px 48px 64px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 
+  --font-title: 17px;
   --font-body: 15px;
+  --font-label: 13px;
+  --color-select-bg: #f2f2f2;
+  --accent-bar-width: 4px;
+  --accent-bar-height: 34px;
+  --input-width: 242px;
 }
 
-.chipRow {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 54px 67px;
-  flex-wrap: nowrap;
+.selectSection {
+  max-width: 591px;
+  margin: 0 auto 120px;
 }
 
-.chipWrapper {
-  position: relative;
-}
-
-.chip {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  height: 38px;
-  padding: 0 12px;
+.sectionTitle {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: var(--font-body);
+  font-size: var(--font-title);
   font-weight: 400;
-  color: #010101;
-  background: #fff;
-  border: 1px solid #010101;
-  cursor: pointer;
-  white-space: nowrap;
   text-align: center;
+  margin-bottom: 14px;
+  letter-spacing: 0.01em;
 }
 
-.chipModel {
+.sectionTitleBold {
+  font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
+}
+
+.titleUnderline {
+  width: 165px;
+  height: 3px;
+  background: #010101;
+  margin: 0 auto 72px;
+}
+
+.columns {
+  display: flex;
+  gap: 54px 67px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.column {
+  list-style: none;
+}
+
+.columnModels {
   width: 230px;
 }
 
-.chipColor {
+.columnColors {
   width: 136px;
 }
 
-.chipCapacity {
+.columnCapacity {
   width: 104px;
 }
 
-.chipDropdown {
-  position: absolute;
-  top: calc(100% + 4px);
-  left: 0;
-  z-index: 10;
-  list-style: none;
-  min-width: 100%;
-  background: #fff;
-  border: 1px solid #010101;
-}
-
-.chipOption {
+.listItem {
   font-family: Arial, Helvetica, sans-serif;
   font-size: var(--font-body);
-  padding: 8px 12px;
+  line-height: 1.4;
+  min-height: 38px;
+  padding: 9px 0 9px 16px;
   cursor: pointer;
+  position: relative;
   white-space: nowrap;
 }
 
-.chipOption:hover {
-  background: #f2f2f2;
+.listItemSelected {
+  background: var(--color-select-bg);
 }
 
-.chipOptionSelected {
-  background: #f2f2f2;
+.listItemSelected::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--accent-bar-width);
+  height: var(--accent-bar-height);
+  background: #010101;
+}
+
+.desktopNav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
+  max-width: 591px;
+  margin: 40px auto 0;
+  font-family: "Myriad Pro", Myriad, Arial, sans-serif;
+  font-size: var(--font-body);
+}
+
+.desktopNav button {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.desktopNav button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1.4px;
+  background: #010101;
+}
+
+.checkoutSection {
+  max-width: 855px;
+  margin: 0 auto;
+}
+
+.checkoutTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--font-title);
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.checkoutUnderline {
+  width: var(--input-width);
+  height: 2px;
+  background: #010101;
+  margin: 0 auto 48px;
+}
+
+.formRow {
+  display: flex;
+  gap: 66px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.formField {
+  position: relative;
+  flex: 0 0 var(--input-width);
+  max-width: 100%;
+}
+
+.formFieldFull {
+  composes: formField;
+  flex: 0 0 100%;
+  max-width: var(--input-width);
+  margin: 0 auto 32px;
+}
+
+.formFieldNarrow {
+  flex: 0 0 var(--input-width);
+}
+
+.formLabel {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--font-label);
+  color: gray;
+  letter-spacing: -0.04em;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.formInput {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--font-body);
+  color: #010101;
+  padding-bottom: 6px;
+  border-bottom: 2px solid gray;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+  background: transparent;
+}
+
+.formInput:focus {
+  border-bottom-color: #010101;
+}
+
+.sendButton {
+  display: block;
+  margin-left: auto;
+  margin-top: 32px;
+  font-family: "Myriad Pro", Myriad, Arial, sans-serif;
+  font-size: var(--font-body);
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.sendButton::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1.3px;
+  background: #010101;
 }
 
 /* ── Mobile layout (step-by-step) ── */
