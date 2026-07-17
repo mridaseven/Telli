@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import {
   IPHONE_MODELS_DESKTOP,
   IPHONE_MODELS_MOBILE,
@@ -39,6 +40,11 @@ export default function SelectPage() {
     city: "",
     email: "",
   });
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const mobileStepIndex = MOBILE_STEPS.indexOf(mobileStep);
 
@@ -200,24 +206,28 @@ export default function SelectPage() {
     </ul>
   );
 
-  return (
-    <div className={styles.page}>
-      <div className={styles.desktop}>
-        <section className={styles.selectSection}>
-          <h2 className={styles.sectionTitle}>
-            <span>Select </span>
-            <span className={styles.sectionTitleBold}>iPhone</span>
-          </h2>
-          <div className={styles.titleUnderline} />
-          {renderDesktopColumns()}
-        </section>
-      </div>
-      <nav className={styles.desktopNav}>
-        <button type="button">Prev</button>
-        <button type="button">Next</button>
-      </nav>
+  const desktopNav = (
+    <nav className={styles.desktopNav} aria-label="Selection navigation">
+      <button type="button">Prev</button>
+      <button type="button">Next</button>
+    </nav>
+  );
 
-      <div className={styles.mobile}>
+  return (
+    <>
+      <div className={styles.page}>
+        <div className={styles.desktop}>
+          <section className={styles.selectSection}>
+            <h2 className={styles.sectionTitle}>
+              <span>Select </span>
+              <span className={styles.sectionTitleBold}>iPhone</span>
+            </h2>
+            <div className={styles.titleUnderline} />
+            {renderDesktopColumns()}
+          </section>
+        </div>
+
+        <div className={styles.mobile}>
         {mobileStep !== "checkout" ? (
           <>
             <header className={styles.mobileHeader}>
@@ -267,7 +277,9 @@ export default function SelectPage() {
             </button>
           </nav>
         )}
+        </div>
       </div>
-    </div>
+      {mounted ? createPortal(desktopNav, document.body) : null}
+    </>
   );
 }
