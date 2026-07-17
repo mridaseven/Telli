@@ -64,6 +64,13 @@ export default function SelectPage() {
     setForm((prev) => ({ ...prev, [field]: value }));
   };
 
+  const renderSpacedWords = (text: string) =>
+    text.split(" ").map((word, index) => (
+      <span key={`${word}-${index}`} className={styles.listWord}>
+        {word}
+      </span>
+    ));
+
   const renderDesktopColumns = () => (
     <div className={styles.columns}>
       <ul className={`${styles.column} ${styles.columnModels}`}>
@@ -75,7 +82,7 @@ export default function SelectPage() {
             }`}
             onClick={() => setSelection((s) => ({ ...s, model }))}
           >
-            {model}
+            {renderSpacedWords(model)}
           </li>
         ))}
       </ul>
@@ -88,7 +95,7 @@ export default function SelectPage() {
             }`}
             onClick={() => setSelection((s) => ({ ...s, color }))}
           >
-            {color}
+            {renderSpacedWords(color)}
           </li>
         ))}
       </ul>
@@ -101,7 +108,7 @@ export default function SelectPage() {
             }`}
             onClick={() => setSelection((s) => ({ ...s, capacity }))}
           >
-            {capacity}
+            {renderSpacedWords(capacity)}
           </li>
         ))}
       </ul>
