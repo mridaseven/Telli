@@ -208,8 +208,13 @@ export default function SelectPage() {
 
   const desktopNav = (
     <nav className={styles.desktopNav} aria-label="Selection navigation">
-      <button type="button">Prev</button>
-      <button type="button">Next</button>
+      <button type="button" className={styles.desktopNavPrev}>
+        Prev
+      </button>
+      <span className={styles.desktopNavDivider} aria-hidden="true" />
+      <button type="button" className={styles.desktopNavNext}>
+        Next
+      </button>
     </nav>
   );
 
@@ -218,11 +223,13 @@ export default function SelectPage() {
       <div className={styles.page}>
         <div className={styles.desktop}>
           <section className={styles.selectSection}>
-            <h2 className={styles.sectionTitle}>
-              <span>Select </span>
-              <span className={styles.sectionTitleBold}>iPhone</span>
-            </h2>
-            <div className={styles.titleUnderline} />
+            <header className={styles.selectHeader}>
+              <h2 className={styles.sectionTitle}>
+                <span>Select </span>
+                <span className={styles.sectionTitleBold}>iPhone</span>
+              </h2>
+              <div className={styles.titleUnderline} />
+            </header>
             {renderDesktopColumns()}
           </section>
         </div>
