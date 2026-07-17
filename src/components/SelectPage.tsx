@@ -202,7 +202,6 @@ export default function SelectPage() {
 
   return (
     <div className={styles.page}>
-      {/* Desktop */}
       <div className={styles.desktop}>
         <section className={styles.selectSection}>
           <h2 className={styles.sectionTitle}>
@@ -224,7 +223,6 @@ export default function SelectPage() {
         </section>
       </div>
 
-      {/* Mobile */}
       <div className={styles.mobile}>
         {mobileStep !== "checkout" ? (
           <>
