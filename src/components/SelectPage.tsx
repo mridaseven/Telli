@@ -109,7 +109,7 @@ export default function SelectPage() {
 
     return (
       <>
-        <div className={fieldClass}>
+        <div className={isMobile ? fieldClass : styles.formFieldFull}>
           <label className={labelClass}>Type in name...</label>
           <input
             className={inputClass}
