@@ -216,13 +216,11 @@ export default function SelectPage() {
   const desktopNav = (
     <nav className={styles.desktopNav} aria-label="Selection navigation">
       <button type="button" className={styles.desktopNavPrev}>
-        <span className={styles.desktopNavLabel}>Prev</span>
-        <span className={styles.desktopNavUnderline} aria-hidden="true" />
+        Prev
       </button>
       <span className={styles.desktopNavDivider} aria-hidden="true" />
       <button type="button" className={styles.desktopNavNext}>
-        <span className={styles.desktopNavLabel}>Next</span>
-        <span className={styles.desktopNavUnderline} aria-hidden="true" />
+        Next
       </button>
     </nav>
   );
@@ -233,8 +231,8 @@ export default function SelectPage() {
         <div className={styles.desktop}>
           <header className={styles.selectHeader}>
             <h2 className={styles.sectionTitle}>
-              <span>Select </span>
-              <span className={styles.sectionTitleBold}>iPhone</span>
+              <span className={styles.titleWord}>Select</span>
+              <span className={styles.titleWordBold}>iPhone</span>
             </h2>
             <div className={styles.titleUnderline} />
           </header>

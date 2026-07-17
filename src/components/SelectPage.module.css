@@ -18,14 +18,13 @@
   display: none;
   width: 100%;
   min-height: 100vh;
-  padding: calc(8vh) 24px 24px;
+  padding: calc(10vh) 24px 24px;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: calc(100px * var(--svg-scale));
 
   --color-select-bg: #f2f2f2;
   --accent-bar-width: calc(4px * var(--svg-scale));
@@ -38,7 +37,7 @@
   align-items: center;
   flex-shrink: 0;
   width: 100%;
-  margin: 0;
+  margin: 0 0 calc(120px * var(--svg-scale));
   position: relative;
   z-index: 2;
 }
@@ -62,18 +61,30 @@
   margin: 0;
   letter-spacing: 0;
   line-height: var(--font-title);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: calc(8px * var(--svg-scale));
 }
 
-.sectionTitleBold {
+.titleWord {
+  display: inline-block;
+  padding-bottom: calc(4px * var(--svg-scale));
+}
+
+.titleWordBold {
   font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
   font-weight: 700;
+  display: inline-block;
+  padding-bottom: calc(4px * var(--svg-scale));
 }
 
 .titleUnderline {
   width: calc(164.68px * var(--svg-scale));
-  height: calc(2.9px * var(--svg-scale));
+  height: max(calc(2.9px * var(--svg-scale)), 2px);
   background: #010101;
   margin: calc(15px * var(--svg-scale)) auto 0;
+  flex-shrink: 0;
 }
 
 .columns {
@@ -113,13 +124,17 @@
   font-weight: 400;
   font-style: normal;
   line-height: calc(var(--font-body) + 4px);
-  padding: 0 0 calc(3px * var(--svg-scale)) calc(17.36px * var(--svg-scale));
+  padding: 0 0 calc(4px * var(--svg-scale)) calc(17.36px * var(--svg-scale));
   margin: 0 0 var(--row-gap);
   cursor: pointer;
   position: relative;
   white-space: nowrap;
   color: #010101;
-  display: block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  gap: 0.2em;
   -webkit-font-smoothing: none;
   -moz-osx-font-smoothing: auto;
   -webkit-text-stroke: 0.3px #010101;
@@ -128,12 +143,7 @@
 
 .listWord {
   display: inline-block;
-  margin-right: 0.22em;
-  padding-bottom: calc(2px * var(--svg-scale));
-}
-
-.listWord:last-child {
-  margin-right: 0;
+  padding-bottom: calc(3px * var(--svg-scale));
 }
 
 .listItem:last-child {
@@ -177,7 +187,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  gap: calc(6px * var(--svg-scale));
   font-family: "Myriad Pro", Myriad, Arial, sans-serif;
   z-index: 1000;
   pointer-events: auto;
@@ -185,59 +194,53 @@
 
 .desktopNavPrev,
 .desktopNavNext {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0;
+  position: relative;
+  display: inline-block;
+  padding: 0 0 calc(8px * var(--svg-scale));
   background: none;
   border: none;
   cursor: pointer;
   color: #010101;
-  transform: scaleX(1.1);
-  transform-origin: left center;
-}
-
-.desktopNavLabel {
+  font-family: "Myriad Pro", Myriad, Arial, sans-serif;
   font-size: var(--font-nav);
   font-weight: 400;
   line-height: var(--font-nav);
   -webkit-font-smoothing: none;
   -moz-osx-font-smoothing: auto;
-}
-
-.desktopNavPrev .desktopNavLabel {
   letter-spacing: -0.02em;
 }
 
-.desktopNavNext .desktopNavLabel {
+.desktopNavNext {
   letter-spacing: 0.01em;
 }
 
-.desktopNavUnderline {
-  display: block;
+.desktopNavPrev::after,
+.desktopNavNext::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
   background: #010101;
-  margin-top: calc(4.5px * var(--svg-scale));
-  transform: scaleX(calc(1 / 1.1));
-  transform-origin: left center;
 }
 
-.desktopNavPrev .desktopNavUnderline {
+.desktopNavPrev::after {
   width: calc(51.21px * var(--svg-scale));
-  height: calc(1.76px * var(--svg-scale));
+  height: max(calc(1.76px * var(--svg-scale)), 2px);
 }
 
-.desktopNavNext .desktopNavUnderline {
+.desktopNavNext::after {
   width: calc(60.27px * var(--svg-scale));
-  height: calc(1.37px * var(--svg-scale));
+  height: max(calc(1.37px * var(--svg-scale)), 2px);
 }
 
 .desktopNavDivider {
   display: block;
-  width: calc(1.37px * var(--svg-scale));
+  width: max(calc(1.37px * var(--svg-scale)), 2px);
   height: calc(31.51px * var(--svg-scale));
   background: #010101;
   flex-shrink: 0;
-  margin: 0 calc(2px * var(--svg-scale));
+  margin: 0 calc(8px * var(--svg-scale));
+  align-self: center;
 }
 
 .checkoutSection {
