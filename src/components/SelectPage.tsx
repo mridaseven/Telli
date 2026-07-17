@@ -57,12 +57,15 @@ export default function SelectPage() {
     setForm((prev) => ({ ...prev, [field]: value }));
   };
 
-  const renderSpacedWords = (text: string) =>
-    text.split(" ").map((word, index) => (
+  const renderSpacedWords = (text: string) => {
+    const words = text.split(" ");
+    return words.map((word, index) => (
       <span key={`${word}-${index}`} className={styles.listWord}>
         {word}
+        {index < words.length - 1 ? "\u00a0" : ""}
       </span>
     ));
+  };
 
   const renderDesktopColumns = () => (
     <div className={styles.columns}>

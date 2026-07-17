@@ -11,8 +11,13 @@
   --font-title: calc(24px * var(--svg-scale));
   --font-body: calc(24px * var(--svg-scale));
   --font-nav: calc(26.4px * var(--svg-scale));
-  --row-gap: calc(26px * var(--svg-scale));
-  --word-gap: 0.35em;
+  --row-gap: calc(20px * var(--svg-scale));
+  --word-gap: 0.42em;
+  --selected-bg: #f2f2f2;
+  --selected-height: calc(38.31px * var(--svg-scale));
+  --selected-bar-width: calc(4px * var(--svg-scale));
+  --selected-bar-height: calc(34.17px * var(--svg-scale));
+  --selected-text-indent: calc(17.36px * var(--svg-scale));
 }
 
 /* ── Desktop layout (matches reference PNG) ── */
@@ -28,9 +33,9 @@
   grid-template-rows: min-content 1fr auto;
   grid-template-columns: 1fr;
 
-  --color-select-bg: #f2f2f2;
-  --accent-bar-width: calc(4px * var(--svg-scale));
-  --accent-bar-height: calc(34.17px * var(--svg-scale));
+  --color-select-bg: var(--selected-bg);
+  --accent-bar-width: var(--selected-bar-width);
+  --accent-bar-height: var(--selected-bar-height);
 }
 
 .selectHeader {
@@ -106,6 +111,9 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--row-gap);
 }
 
 .columnModels {
@@ -128,9 +136,11 @@
   font-size: var(--font-body);
   font-weight: 400;
   font-style: normal;
-  line-height: calc(var(--font-body) + 6px);
-  padding: 0 0 calc(2px * var(--svg-scale)) calc(17.36px * var(--svg-scale));
-  margin: 0 0 var(--row-gap);
+  line-height: var(--font-body);
+  width: 100%;
+  min-height: var(--selected-height);
+  padding: 0 0 0 var(--selected-text-indent);
+  margin: 0;
   cursor: pointer;
   position: relative;
   white-space: nowrap;
@@ -140,6 +150,7 @@
   flex-wrap: nowrap;
   align-items: center;
   gap: var(--word-gap);
+  box-sizing: border-box;
   -webkit-font-smoothing: none;
   -moz-osx-font-smoothing: auto;
   -webkit-text-stroke: 0.3px #010101;
@@ -150,18 +161,11 @@
   display: inline-block;
 }
 
-.listItem:last-child {
-  margin-bottom: 0;
-}
-
 .listItemSelected {
-  background: var(--color-select-bg);
-  min-height: calc(38.31px * var(--svg-scale));
-  padding-top: calc(7.15px * var(--svg-scale));
-  padding-bottom: calc(7.16px * var(--svg-scale));
-  margin-bottom: var(--row-gap);
+  background: var(--selected-bg);
+  min-height: var(--selected-height);
+  padding: 0 calc(8px * var(--svg-scale)) 0 var(--selected-text-indent);
   line-height: var(--font-body);
-  box-sizing: border-box;
 }
 
 .listItemSelected::before {
@@ -170,9 +174,10 @@
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: var(--accent-bar-width);
-  height: var(--accent-bar-height);
+  width: var(--selected-bar-width);
+  height: var(--selected-bar-height);
   background: #010101;
+  z-index: 1;
 }
 
 .desktopNav {
