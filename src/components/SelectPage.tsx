@@ -210,11 +210,11 @@ export default function SelectPage() {
           </h2>
           <div className={styles.titleUnderline} />
           {renderDesktopColumns()}
-          <div className={styles.desktopNav}>
-            <button type="button">Prev</button>
-            <button type="button">Next</button>
-          </div>
         </section>
+        <nav className={styles.desktopNav}>
+          <button type="button">Prev</button>
+          <button type="button">Next</button>
+        </nav>
       </div>
 
       <div className={styles.mobile}>
