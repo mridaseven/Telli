@@ -203,18 +203,20 @@ export default function SelectPage() {
   return (
     <div className={styles.page}>
       <div className={styles.desktop}>
-        <section className={styles.selectSection}>
-          <h2 className={styles.sectionTitle}>
-            <span>Select </span>
-            <span className={styles.sectionTitleBold}>iPhone</span>
-          </h2>
-          <div className={styles.titleUnderline} />
-          {renderDesktopColumns()}
-        </section>
-        <nav className={styles.desktopNav}>
-          <button type="button">Prev</button>
-          <button type="button">Next</button>
-        </nav>
+        <div className={styles.svgFrame}>
+          <section className={styles.selectSection}>
+            <h2 className={styles.sectionTitle}>
+              <span>Select </span>
+              <span className={styles.sectionTitleBold}>iPhone</span>
+            </h2>
+            <div className={styles.titleUnderline} />
+            {renderDesktopColumns()}
+          </section>
+          <nav className={styles.desktopNav}>
+            <button type="button">Prev</button>
+            <button type="button">Next</button>
+          </nav>
+        </div>
       </div>
 
       <div className={styles.mobile}>

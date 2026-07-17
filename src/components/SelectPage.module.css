@@ -9,29 +9,39 @@
 /* ── Desktop layout (Telli select page.svg — 1853.96×3269.13) ── */
 .desktop {
   display: none;
-  min-height: auto;
-  padding: 16px;
+  width: 100%;
+  padding: 24px;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
   align-items: center;
   justify-content: center;
 
-  /* Bigger text, tighter layout footprint */
-  --font-scale: 0.625;
-  --layout-scale: 0.5;
-  --font-title: calc(24px * var(--font-scale));
-  --font-body: calc(24px * var(--font-scale));
-  --font-nav: calc(24px * var(--font-scale));
+  /* Single proportional scale from SVG artboard width */
+  --svg-scale: clamp(0.72, (100vw - 48px) / 1853.96, 0.82);
+  --font-title: calc(24px * var(--svg-scale));
+  --font-body: calc(24px * var(--svg-scale));
+  --font-nav: calc(24px * var(--svg-scale));
   --color-select-bg: #f2f2f2;
-  --accent-bar-width: calc(4px * var(--font-scale));
-  --accent-bar-height: calc(34px * var(--font-scale));
+  --accent-bar-width: calc(4px * var(--svg-scale));
+  --accent-bar-height: calc(34.17px * var(--svg-scale));
+}
+
+/* Select region only: title (y≈1224) through nav (y≈2150) */
+.svgFrame {
+  position: relative;
+  width: calc(1853.96px * var(--svg-scale));
+  max-width: 100%;
+  height: calc(926px * var(--svg-scale));
+  margin: 0 auto;
 }
 
 .selectSection {
-  width: calc(591px * var(--layout-scale));
-  max-width: 100%;
-  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(591px * var(--svg-scale));
 }
 
 .sectionTitle {
@@ -40,7 +50,7 @@
   font-weight: 400;
   font-style: normal;
   text-align: center;
-  margin-bottom: calc(10px * var(--layout-scale));
+  margin-bottom: calc(15px * var(--svg-scale));
   letter-spacing: 0;
   line-height: var(--font-body);
 }
@@ -51,17 +61,17 @@
 }
 
 .titleUnderline {
-  width: calc(165px * var(--layout-scale));
-  height: calc(3px * var(--font-scale));
+  width: calc(164.68px * var(--svg-scale));
+  height: calc(3px * var(--svg-scale));
   background: #010101;
-  margin: 0 auto calc(40px * var(--layout-scale));
+  margin: 0 auto calc(243px * var(--svg-scale));
 }
 
 .columns {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: calc(40px * var(--layout-scale)) calc(50px * var(--layout-scale));
+  gap: calc(54px * var(--svg-scale)) calc(67px * var(--svg-scale));
   justify-content: center;
   align-items: flex-start;
 }
@@ -73,18 +83,18 @@
 }
 
 .columnModels {
-  width: calc(230px * var(--layout-scale));
-  flex: 0 0 calc(230px * var(--layout-scale));
+  width: calc(230.24px * var(--svg-scale));
+  flex: 0 0 calc(230.24px * var(--svg-scale));
 }
 
 .columnColors {
-  width: calc(136px * var(--layout-scale));
-  flex: 0 0 calc(136px * var(--layout-scale));
+  width: calc(136.44px * var(--svg-scale));
+  flex: 0 0 calc(136.44px * var(--svg-scale));
 }
 
 .columnCapacity {
-  width: calc(104px * var(--layout-scale));
-  flex: 0 0 calc(104px * var(--layout-scale));
+  width: calc(104.12px * var(--svg-scale));
+  flex: 0 0 calc(104.12px * var(--svg-scale));
 }
 
 .listItem {
@@ -93,8 +103,8 @@
   font-weight: 400;
   font-style: normal;
   line-height: var(--font-body);
-  padding: 0 0 0 calc(12px * var(--layout-scale));
-  margin: 0 0 calc(6px * var(--layout-scale));
+  padding: 0 0 0 calc(16px * var(--svg-scale));
+  margin: 0 0 calc(19px * var(--svg-scale));
   cursor: pointer;
   position: relative;
   white-space: nowrap;
@@ -110,10 +120,10 @@
 
 .listItemSelected {
   background: var(--color-select-bg);
-  min-height: calc(38px * var(--font-scale));
-  padding-top: calc(7px * var(--font-scale));
-  padding-bottom: calc(5px * var(--font-scale));
-  margin-bottom: calc(6px * var(--layout-scale));
+  min-height: calc(38.31px * var(--svg-scale));
+  padding-top: calc(7px * var(--svg-scale));
+  padding-bottom: calc(5px * var(--svg-scale));
+  margin-bottom: calc(19px * var(--svg-scale));
   line-height: var(--font-body);
   box-sizing: border-box;
 }
@@ -130,23 +140,22 @@
 }
 
 .desktopNav {
-  position: fixed;
-  bottom: calc(40px * var(--layout-scale));
-  right: calc(40px * var(--layout-scale));
+  position: absolute;
+  bottom: calc(8px * var(--svg-scale));
+  right: calc(59px * var(--svg-scale));
   display: flex;
   justify-content: flex-end;
-  gap: calc(20px * var(--layout-scale));
+  gap: calc(24px * var(--svg-scale));
   font-family: "Myriad Pro", Myriad, Arial, sans-serif;
   font-size: var(--font-nav);
   font-weight: 400;
   line-height: var(--font-nav);
   letter-spacing: -0.02em;
-  z-index: 10;
 }
 
 .desktopNav button {
   position: relative;
-  padding-bottom: calc(4px * var(--font-scale));
+  padding-bottom: calc(4px * var(--svg-scale));
   -webkit-text-stroke: 0.1px #010101;
   paint-order: stroke fill;
 }
@@ -157,7 +166,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  height: calc(1.4px * var(--font-scale));
+  height: calc(1.4px * var(--svg-scale));
   background: #010101;
 }
 
@@ -423,6 +432,7 @@
   .desktop {
     display: flex;
     flex: 0 0 auto;
+    min-height: auto;
   }
 
   .mobile {
