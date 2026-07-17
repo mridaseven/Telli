@@ -9,10 +9,13 @@
 /* ── Desktop layout (Telli select page.svg — 1853.96×3269.13) ── */
 .desktop {
   display: none;
-  padding: 40px 24px 32px;
+  min-height: 100vh;
+  padding: 24px;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
+  align-items: center;
+  justify-content: center;
 
   /* Scale SVG units (24px in file → 12px on screen) */
   --svg-scale: 0.5;
@@ -407,7 +410,7 @@
 
 @media (min-width: 768px) {
   .desktop {
-    display: block;
+    display: flex;
   }
 
   .mobile {
