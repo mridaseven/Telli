@@ -14,7 +14,7 @@ A pixel-perfect Next.js + TypeScript implementation of the Telli SVG designs in 
 ## Responsive Layouts
 
 - **Desktop (≥1024px):** Matches `Telli.svg` and `Telli select page.svg`
-- **Mobile (<1024px):** Matches `Telli Mobile.svg`, `Telli Select mobile page.svg`, and `Telli mobile select page 2.svg`
+- **Mobile (<1024px):** Matches `Telli Mobile.svg`, `Telli Select mobile page.svg`, `Telli mobile select page 2.svg`, and `Telli select capacity mobile.svg`
 
 ## Development
 
