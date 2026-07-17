@@ -6,10 +6,10 @@ A pixel-perfect Next.js + TypeScript implementation of the Telli SVG designs in 
 
 | Route | Description |
 |-------|-------------|
-| `/` | Telli landing page |
+| `/` | Telli landing page (served directly, no redirect) |
 | `/select` | iPhone selection & checkout flow |
 
-Legacy routes `/phonem`, `/telli`, and their `/select` paths redirect to the routes above.
+`/phonem` and `/telli` are legacy paths that redirect to `/` and `/select`.
 
 ## Responsive Layouts
 

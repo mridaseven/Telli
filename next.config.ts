@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   async redirects() {
     return [
+      // Legacy URLs only — / already serves the Telli landing page directly
       { source: "/phonem", destination: "/", permanent: true },
       { source: "/phonem/select", destination: "/select", permanent: true },
       { source: "/telli", destination: "/", permanent: true },
