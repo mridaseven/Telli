@@ -97,9 +97,7 @@ export default function SelectPage() {
           <div key={chip.key} className={styles.chipWrapper}>
             <button
               type="button"
-              className={`${styles.chip} ${chip.className} ${
-                openDropdown === chip.key ? styles.chipActive : ""
-              }`}
+              className={`${styles.chip} ${chip.className}`}
               onClick={() =>
                 setOpenDropdown((current) =>
                   current === chip.key ? null : chip.key
@@ -236,15 +234,7 @@ export default function SelectPage() {
     <div className={styles.page}>
       {/* Desktop */}
       <div className={styles.desktop}>
-        <section className={styles.selectSection}>
-          {renderDesktopChips()}
-        </section>
-
-        <section className={styles.checkoutSection}>
-          <h2 className={styles.checkoutTitle}>Checkout</h2>
-          <div className={styles.checkoutUnderline} />
-          {renderCheckoutForm(false)}
-        </section>
+        {renderDesktopChips()}
       </div>
 
       {/* Mobile */}
