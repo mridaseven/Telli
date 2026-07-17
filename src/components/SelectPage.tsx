@@ -215,12 +215,6 @@ export default function SelectPage() {
             <button type="button">Next</button>
           </div>
         </section>
-
-        <section className={styles.checkoutSection}>
-          <h2 className={styles.checkoutTitle}>Checkout</h2>
-          <div className={styles.checkoutUnderline} />
-          {renderCheckoutForm(false)}
-        </section>
       </div>
 
       <div className={styles.mobile}>
