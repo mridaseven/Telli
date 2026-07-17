@@ -205,6 +205,11 @@ export default function SelectPage() {
       {/* Desktop */}
       <div className={styles.desktop}>
         <section className={styles.selectSection}>
+          <h2 className={styles.sectionTitle}>
+            <span>Select </span>
+            <span className={styles.sectionTitleBold}>iPhone</span>
+          </h2>
+          <div className={styles.titleUnderline} />
           {renderDesktopColumns()}
           <div className={styles.desktopNav}>
             <button type="button">Prev</button>
