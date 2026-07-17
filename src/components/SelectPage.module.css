@@ -2,6 +2,8 @@
   min-height: 100vh;
   background: #fff;
   color: #010101;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
 }
 
 /* ── Desktop layout (Telli select page.svg — 1853.96×3269.13) ── */
@@ -9,18 +11,16 @@
   display: none;
   padding: 80px 48px 64px;
   text-rendering: geometricPrecision;
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
 
-  /* SVG: list/title 24px Arial, nav 24px Myriad Pro */
+  /* SVG: list/title 24px ArialMT, nav 24px Myriad Pro */
   --font-title: 24px;
   --font-body: 24px;
   --font-nav: 24px;
   --color-select-bg: #f2f2f2;
   --accent-bar-width: 4px;
   --accent-bar-height: 34px;
-  --row-height: 38px;
-  --row-gap: 5px;
 }
 
 .selectSection {
@@ -30,14 +30,14 @@
 }
 
 .sectionTitle {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial MT", Arial, Helvetica, sans-serif;
   font-size: var(--font-title);
   font-weight: 400;
   font-style: normal;
   text-align: center;
   margin-bottom: 14px;
   letter-spacing: 0;
-  line-height: 1;
+  line-height: 24px;
 }
 
 .sectionTitleBold {
@@ -83,24 +83,34 @@
 }
 
 .listItem {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial MT", Arial, Helvetica, sans-serif;
   font-size: var(--font-body);
   font-weight: 400;
   font-style: normal;
-  line-height: 1;
-  height: var(--row-height);
-  margin-bottom: var(--row-gap);
+  line-height: 24px;
   padding: 0 0 0 16px;
+  margin: 0 0 10px;
   cursor: pointer;
   position: relative;
   white-space: nowrap;
   color: #010101;
-  display: flex;
-  align-items: center;
+  display: block;
+  -webkit-text-stroke: 0.2px #010101;
+  paint-order: stroke fill;
+}
+
+.listItem:last-child {
+  margin-bottom: 0;
 }
 
 .listItemSelected {
   background: var(--color-select-bg);
+  min-height: 38px;
+  padding-top: 7px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  line-height: 24px;
+  box-sizing: border-box;
 }
 
 .listItemSelected::before {
@@ -122,13 +132,15 @@
   font-family: "Myriad Pro", Myriad, Arial, sans-serif;
   font-size: var(--font-nav);
   font-weight: 400;
-  line-height: 1;
-  letter-spacing: 0;
+  line-height: 24px;
+  letter-spacing: -0.02em;
 }
 
 .desktopNav button {
   position: relative;
   padding-bottom: 4px;
+  -webkit-text-stroke: 0.15px #010101;
+  paint-order: stroke fill;
 }
 
 .desktopNav button::after {

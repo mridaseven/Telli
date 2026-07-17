@@ -40,6 +40,17 @@ input {
 }
 
 @font-face {
+  font-family: "Arial MT";
+  src: local("Arial MT"), local("Arial"), local("ArialMT"), local("Helvetica Neue"),
+    local("Helvetica");
+  font-weight: 400;
+  font-style: normal;
+  ascent-override: 88%;
+  descent-override: 12%;
+  line-gap-override: 0%;
+}
+
+@font-face {
   font-family: "Arial Rounded MT Bold";
   src: local("Arial Rounded MT Bold"), local("ArialRoundedMTBold");
   font-weight: 700;
