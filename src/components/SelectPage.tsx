@@ -231,7 +231,7 @@ export default function SelectPage() {
         <div className={styles.desktop}>
           <header className={styles.selectHeader}>
             <h2 className={styles.sectionTitle}>
-              <span className={styles.titleWord}>Select</span>
+              <span className={styles.titleWord}>Select </span>
               <span className={styles.titleWordBold}>iPhone</span>
             </h2>
             <div className={styles.titleUnderline} />
