@@ -9,6 +9,8 @@
   display: none;
   padding: 80px 48px 64px;
   text-rendering: geometricPrecision;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
 
   /* SVG: list/title 24px Arial, nav 24px Myriad Pro */
   --font-title: 24px;
