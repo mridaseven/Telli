@@ -11,8 +11,8 @@
   --font-title: calc(24px * var(--svg-scale));
   --font-body: calc(24px * var(--svg-scale));
   --font-nav: calc(26.4px * var(--svg-scale));
-  --row-gap: calc(22px * var(--svg-scale));
-  --word-gap: 0.32em;
+  --row-gap: calc(26px * var(--svg-scale));
+  --word-gap: 0.35em;
 }
 
 /* ── Desktop layout (matches reference PNG) ── */
@@ -21,11 +21,11 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  padding: 0 24px;
+  padding: 0 32px 32px;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
-  grid-template-rows: min-content 1fr;
+  grid-template-rows: min-content 1fr auto;
   grid-template-columns: 1fr;
 
   --color-select-bg: #f2f2f2;
@@ -83,8 +83,10 @@
 }
 
 .titleUnderline {
+  display: block;
   width: calc(164.68px * var(--svg-scale));
-  height: max(calc(2.9px * var(--svg-scale)), 2px);
+  height: 3px;
+  min-height: 3px;
   background: #010101;
   margin: calc(15px * var(--svg-scale)) auto 0;
   flex-shrink: 0;
@@ -174,24 +176,20 @@
 }
 
 .desktopNav {
-  --svg-scale: clamp(0.72, (100vw - 48px) / 1853.96, 0.82);
   --font-nav: calc(26.4px * var(--svg-scale));
 
-  display: none;
-  position: fixed;
-  top: auto;
-  left: auto;
-  right: 32px;
-  bottom: 32px;
-  width: auto;
-  margin: 0;
-  padding: 0;
+  grid-row: 3;
+  justify-self: end;
+  align-self: end;
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+  width: auto;
+  margin: 0;
+  padding: 0;
   font-family: "Myriad Pro", Myriad, Arial, sans-serif;
-  z-index: 1000;
-  pointer-events: auto;
+  z-index: 10;
 }
 
 .desktopNavPrev,
@@ -500,10 +498,6 @@
   .desktop {
     display: grid;
     min-height: 100vh;
-  }
-
-  .desktopNav {
-    display: flex;
   }
 
   .mobile {

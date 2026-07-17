@@ -214,22 +214,21 @@ export default function SelectPage() {
             <span className={styles.titleWord}>Select</span>
             <span className={styles.titleWordBold}>iPhone</span>
           </h2>
-          <div className={styles.titleUnderline} />
+          <div className={styles.titleUnderline} aria-hidden="true" />
         </header>
         <section className={styles.selectSection}>
           {renderDesktopColumns()}
         </section>
+        <nav className={styles.desktopNav} aria-label="Selection navigation">
+          <button type="button" className={styles.desktopNavPrev}>
+            Prev
+          </button>
+          <span className={styles.desktopNavDivider} aria-hidden="true" />
+          <button type="button" className={styles.desktopNavNext}>
+            Next
+          </button>
+        </nav>
       </div>
-
-      <nav className={styles.desktopNav} aria-label="Selection navigation">
-        <button type="button" className={styles.desktopNavPrev}>
-          Prev
-        </button>
-        <span className={styles.desktopNavDivider} aria-hidden="true" />
-        <button type="button" className={styles.desktopNavNext}>
-          Next
-        </button>
-      </nav>
 
       <div className={styles.mobile}>
         {mobileStep !== "checkout" ? (
