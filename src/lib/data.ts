@@ -49,7 +49,7 @@ export type SelectionState = {
 };
 
 export const DEFAULT_SELECTION_DESKTOP: SelectionState = {
-  model: IPHONE_MODELS_DESKTOP[0],
+  model: "iPhone 14 Pro Max",
   color: COLORS[0],
   capacity: CAPACITIES_DESKTOP[0],
 };
