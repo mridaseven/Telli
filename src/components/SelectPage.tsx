@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { createPortal } from "react-dom";
+import { useState } from "react";
 import {
   IPHONE_MODELS_DESKTOP,
   IPHONE_MODELS_MOBILE,
@@ -40,12 +39,6 @@ export default function SelectPage() {
     city: "",
     email: "",
   });
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   const mobileStepIndex = MOBILE_STEPS.indexOf(mobileStep);
 
   const goNext = () => {
@@ -213,35 +206,32 @@ export default function SelectPage() {
     </ul>
   );
 
-  const desktopNav = (
-    <nav className={styles.desktopNav} aria-label="Selection navigation">
-      <button type="button" className={styles.desktopNavPrev}>
-        Prev
-      </button>
-      <span className={styles.desktopNavDivider} aria-hidden="true" />
-      <button type="button" className={styles.desktopNavNext}>
-        Next
-      </button>
-    </nav>
-  );
-
   return (
-    <>
-      <div className={styles.page}>
-        <div className={styles.desktop}>
-          <header className={styles.selectHeader}>
-            <h2 className={styles.sectionTitle}>
-              <span className={styles.titleWord}>Select </span>
-              <span className={styles.titleWordBold}>iPhone</span>
-            </h2>
-            <div className={styles.titleUnderline} />
-          </header>
-          <section className={styles.selectSection}>
-            {renderDesktopColumns()}
-          </section>
-        </div>
+    <div className={styles.page}>
+      <div className={styles.desktop}>
+        <header className={styles.selectHeader}>
+          <h2 className={styles.sectionTitle}>
+            <span className={styles.titleWord}>Select</span>
+            <span className={styles.titleWordBold}>iPhone</span>
+          </h2>
+          <div className={styles.titleUnderline} />
+        </header>
+        <section className={styles.selectSection}>
+          {renderDesktopColumns()}
+        </section>
+      </div>
 
-        <div className={styles.mobile}>
+      <nav className={styles.desktopNav} aria-label="Selection navigation">
+        <button type="button" className={styles.desktopNavPrev}>
+          Prev
+        </button>
+        <span className={styles.desktopNavDivider} aria-hidden="true" />
+        <button type="button" className={styles.desktopNavNext}>
+          Next
+        </button>
+      </nav>
+
+      <div className={styles.mobile}>
         {mobileStep !== "checkout" ? (
           <>
             <header className={styles.mobileHeader}>
@@ -291,9 +281,7 @@ export default function SelectPage() {
             </button>
           </nav>
         )}
-        </div>
       </div>
-      {mounted ? createPortal(desktopNav, document.body) : null}
-    </>
+    </div>
   );
 }
