@@ -20,7 +20,7 @@
   /* Single proportional scale from SVG artboard width */
   --svg-scale: clamp(0.72, (100vw - 48px) / 1853.96, 0.82);
   --font-title: calc(24px * var(--svg-scale));
-  --font-body: calc(24px * var(--svg-scale));
+  --font-body: calc(27px * var(--svg-scale));
   --font-nav: calc(24px * var(--svg-scale));
   --color-select-bg: #f2f2f2;
   --accent-bar-width: calc(4px * var(--svg-scale));
@@ -110,7 +110,9 @@
   white-space: nowrap;
   color: #010101;
   display: block;
-  -webkit-text-stroke: 0.15px #010101;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: auto;
+  -webkit-text-stroke: 0.3px #010101;
   paint-order: stroke fill;
 }
 
@@ -120,7 +122,7 @@
 
 .listItemSelected {
   background: var(--color-select-bg);
-  min-height: calc(38.31px * var(--svg-scale));
+  min-height: calc(42px * var(--svg-scale));
   padding-top: calc(7px * var(--svg-scale));
   padding-bottom: calc(5px * var(--svg-scale));
   margin-bottom: calc(19px * var(--svg-scale));
@@ -140,9 +142,9 @@
 }
 
 .desktopNav {
-  position: absolute;
-  bottom: calc(8px * var(--svg-scale));
-  right: calc(59px * var(--svg-scale));
+  position: fixed;
+  bottom: calc(32px * var(--svg-scale));
+  right: calc(40px * var(--svg-scale));
   display: flex;
   justify-content: flex-end;
   gap: calc(24px * var(--svg-scale));
@@ -151,12 +153,14 @@
   font-weight: 400;
   line-height: var(--font-nav);
   letter-spacing: -0.02em;
+  z-index: 10;
 }
 
 .desktopNav button {
   position: relative;
   padding-bottom: calc(4px * var(--svg-scale));
-  -webkit-text-stroke: 0.1px #010101;
+  -webkit-font-smoothing: none;
+  -webkit-text-stroke: 0.2px #010101;
   paint-order: stroke fill;
 }
 
