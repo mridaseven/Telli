@@ -1,9 +1,4 @@
-export type Brand = "phonem" | "telli";
-
-export const BRAND_NAMES: Record<Brand, string> = {
-  phonem: "Phonem Brand",
-  telli: "Telli",
-};
+export const BRAND_NAME = "Telli";
 
 export const IPHONE_MODELS_DESKTOP = [
   "iPhone 16 Pro Max",

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Phonem & Telli",
+  title: "Telli",
   description: "As good as new. As simple as it gets.",
 };
 

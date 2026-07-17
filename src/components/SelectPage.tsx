@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import {
-  Brand,
   IPHONE_MODELS_DESKTOP,
   IPHONE_MODELS_MOBILE,
   COLORS,
@@ -13,10 +12,6 @@ import {
   SelectionState,
 } from "@/lib/data";
 import styles from "./SelectPage.module.css";
-
-type SelectPageProps = {
-  brand: Brand;
-};
 
 type MobileStep = "model" | "color" | "capacity" | "checkout";
 
@@ -29,7 +24,7 @@ const STEP_TITLES: Record<MobileStep, { regular: string; bold: string }> = {
   checkout: { regular: "Check", bold: "out" },
 };
 
-export default function SelectPage({ brand }: SelectPageProps) {
+export default function SelectPage() {
   const [selection, setSelection] = useState<SelectionState>(
     DEFAULT_SELECTION_DESKTOP
   );
@@ -206,7 +201,7 @@ export default function SelectPage({ brand }: SelectPageProps) {
   );
 
   return (
-    <div className={styles.page} data-brand={brand}>
+    <div className={styles.page}>
       {/* Desktop */}
       <div className={styles.desktop}>
         <section className={styles.selectSection}>

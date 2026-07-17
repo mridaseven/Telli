@@ -5,7 +5,7 @@
   position: relative;
 }
 
-/* Desktop layout — matches Phonem.svg / Telli.svg (1920×1080) */
+/* Desktop layout — matches Telli.svg (1920×1080) */
 .desktop {
   display: none;
   min-height: 100vh;

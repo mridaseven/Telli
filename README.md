@@ -1,20 +1,20 @@
-# Phonem & Telli Website
+# Telli Website
 
-A pixel-perfect Next.js + TypeScript implementation of the SVG designs in this repository.
+A pixel-perfect Next.js + TypeScript implementation of the Telli SVG designs in this repository.
 
 ## Pages
 
 | Route | Description |
 |-------|-------------|
-| `/phonem` | Phonem Brand landing page |
-| `/telli` | Telli landing page |
-| `/phonem/select` | iPhone selection & checkout flow |
-| `/telli/select` | iPhone selection & checkout flow |
+| `/` | Telli landing page |
+| `/select` | iPhone selection & checkout flow |
+
+Legacy routes `/phonem`, `/telli`, and their `/select` paths redirect to the routes above.
 
 ## Responsive Layouts
 
-- **Desktop (≥1024px):** Matches `Phonem.svg`, `Telli.svg`, `Phonem select page.svg`, and `Telli select page.svg`
-- **Mobile (<1024px):** Matches `Telli Mobile.svg`, `Telli Select mobile page.svg`, `Telli mobile select page 2.svg`, and `phonem select page mobile 3.svg`
+- **Desktop (≥1024px):** Matches `Telli.svg` and `Telli select page.svg`
+- **Mobile (<1024px):** Matches `Telli Mobile.svg`, `Telli Select mobile page.svg`, and `Telli mobile select page 2.svg`
 
 ## Development
 
@@ -23,7 +23,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) — the root redirects to `/phonem`.
+Open [http://localhost:3000](http://localhost:3000).
 
 ## Build
 
