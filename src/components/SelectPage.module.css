@@ -4,12 +4,19 @@
   color: #010101;
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
+
+  /* Shared scale for desktop select + nav */
+  --svg-scale: clamp(0.72, (100vw - 48px) / 1853.96, 0.82);
+  --font-title: calc(24px * var(--svg-scale));
+  --font-body: calc(27px * var(--svg-scale));
+  --font-nav: calc(24px * var(--svg-scale));
 }
 
-/* ── Desktop layout (Telli select page.svg — 1853.96×3269.13) ── */
+/* ── Desktop layout (Telli select page.svg) ── */
 .desktop {
   display: none;
   width: 100%;
+  min-height: 100vh;
   padding: 24px;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: auto;
@@ -17,31 +24,16 @@
   align-items: center;
   justify-content: center;
 
-  /* Single proportional scale from SVG artboard width */
-  --svg-scale: clamp(0.72, (100vw - 48px) / 1853.96, 0.82);
-  --font-title: calc(24px * var(--svg-scale));
-  --font-body: calc(27px * var(--svg-scale));
-  --font-nav: calc(24px * var(--svg-scale));
   --color-select-bg: #f2f2f2;
   --accent-bar-width: calc(4px * var(--svg-scale));
   --accent-bar-height: calc(34.17px * var(--svg-scale));
 }
 
-/* Select region only: title (y≈1224) through nav (y≈2150) */
-.svgFrame {
-  position: relative;
-  width: calc(1853.96px * var(--svg-scale));
-  max-width: 100%;
-  height: calc(926px * var(--svg-scale));
-  margin: 0 auto;
-}
-
 .selectSection {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   width: calc(591px * var(--svg-scale));
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .sectionTitle {
@@ -74,6 +66,7 @@
   gap: calc(54px * var(--svg-scale)) calc(67px * var(--svg-scale));
   justify-content: center;
   align-items: flex-start;
+  text-align: left;
 }
 
 .column {
@@ -142,10 +135,10 @@
 }
 
 .desktopNav {
+  display: none;
   position: fixed;
-  bottom: calc(32px * var(--svg-scale));
-  right: calc(40px * var(--svg-scale));
-  display: flex;
+  bottom: 24px;
+  right: 32px;
   justify-content: flex-end;
   gap: calc(24px * var(--svg-scale));
   font-family: "Myriad Pro", Myriad, Arial, sans-serif;
@@ -426,17 +419,13 @@
 }
 
 @media (min-width: 768px) {
-  .page {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
   .desktop {
     display: flex;
-    flex: 0 0 auto;
-    min-height: auto;
+    min-height: 100vh;
+  }
+
+  .desktopNav {
+    display: flex;
   }
 
   .mobile {
