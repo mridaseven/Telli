@@ -67,46 +67,49 @@ export default function SelectPage() {
     ));
   };
 
+  const renderDesktopListItem = (
+    item: string,
+    isSelected: boolean,
+    onSelect: () => void
+  ) => (
+    <li
+      key={item}
+      className={`${styles.listItem} ${
+        isSelected ? styles.listItemSelected : ""
+      }`}
+      onClick={onSelect}
+    >
+      {isSelected ? (
+        <span className={styles.selectedBar} aria-hidden="true" />
+      ) : null}
+      <span className={styles.listItemText}>{renderSpacedWords(item)}</span>
+    </li>
+  );
+
   const renderDesktopColumns = () => (
     <div className={styles.columns}>
       <ul className={`${styles.column} ${styles.columnModels}`}>
-        {IPHONE_MODELS_DESKTOP.map((model) => (
-          <li
-            key={model}
-            className={`${styles.listItem} ${
-              selection.model === model ? styles.listItemSelected : ""
-            }`}
-            onClick={() => setSelection((s) => ({ ...s, model }))}
-          >
-            {renderSpacedWords(model)}
-          </li>
-        ))}
+        {IPHONE_MODELS_DESKTOP.map((model) =>
+          renderDesktopListItem(model, selection.model === model, () =>
+            setSelection((s) => ({ ...s, model }))
+          )
+        )}
       </ul>
       <ul className={`${styles.column} ${styles.columnColors}`}>
-        {COLORS.map((color) => (
-          <li
-            key={color}
-            className={`${styles.listItem} ${
-              selection.color === color ? styles.listItemSelected : ""
-            }`}
-            onClick={() => setSelection((s) => ({ ...s, color }))}
-          >
-            {renderSpacedWords(color)}
-          </li>
-        ))}
+        {COLORS.map((color) =>
+          renderDesktopListItem(color, selection.color === color, () =>
+            setSelection((s) => ({ ...s, color }))
+          )
+        )}
       </ul>
       <ul className={`${styles.column} ${styles.columnCapacity}`}>
-        {CAPACITIES_DESKTOP.map((capacity) => (
-          <li
-            key={capacity}
-            className={`${styles.listItem} ${
-              selection.capacity === capacity ? styles.listItemSelected : ""
-            }`}
-            onClick={() => setSelection((s) => ({ ...s, capacity }))}
-          >
-            {renderSpacedWords(capacity)}
-          </li>
-        ))}
+        {CAPACITIES_DESKTOP.map((capacity) =>
+          renderDesktopListItem(
+            capacity,
+            selection.capacity === capacity,
+            () => setSelection((s) => ({ ...s, capacity }))
+          )
+        )}
       </ul>
     </div>
   );
@@ -224,11 +227,13 @@ export default function SelectPage() {
         </section>
         <nav className={styles.desktopNav} aria-label="Selection navigation">
           <button type="button" className={styles.desktopNavPrev}>
-            Prev
+            <span className={styles.desktopNavLabel}>Prev</span>
+            <span className={styles.desktopNavUnderline} aria-hidden="true" />
           </button>
           <span className={styles.desktopNavDivider} aria-hidden="true" />
           <button type="button" className={styles.desktopNavNext}>
-            Next
+            <span className={styles.desktopNavLabel}>Next</span>
+            <span className={styles.desktopNavUnderline} aria-hidden="true" />
           </button>
         </nav>
       </div>
