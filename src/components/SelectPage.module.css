@@ -6,9 +6,9 @@
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
 
-  /* Exact SVG pixel metrics (artboard 1853.96px). Scaled only on
-     narrow desktops so proportions always match the design. */
-  --svg-scale: 1;
+  /* SVG proportions (artboard 1853.96px). Fonts and boxes scale
+     together so the design proportions are always preserved. */
+  --svg-scale: clamp(0.62, (100vw - 64px) / 1853.96, 0.72);
   --font-title: calc(24px * var(--svg-scale));
   --font-body: calc(24px * var(--svg-scale));
   --font-nav: calc(24px * var(--svg-scale));
@@ -162,13 +162,14 @@
 .desktopNav {
   display: none;
   position: fixed;
-  right: calc(48px * var(--svg-scale));
-  bottom: calc(40px * var(--svg-scale));
+  right: 44px;
+  bottom: 32px;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   justify-content: flex-end;
   font-family: "Myriad Pro", Myriad, Arial, sans-serif;
   z-index: 1000;
+  pointer-events: auto;
 }
 
 .desktopNavPrev,
@@ -495,8 +496,3 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1100px) {
-  .page {
-    --svg-scale: 0.82;
-  }
-}
