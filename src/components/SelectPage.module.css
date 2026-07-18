@@ -6,12 +6,13 @@
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
 
-  /* Layout scale from SVG artboard (1853.96px wide) */
-  --svg-scale: clamp(0.8, (100vw - 64px) / 1853.96, 1);
-  --font-title: 24px;
-  --font-body: 24px;
-  --font-nav: 26.4px;
-  --row-gap: calc(22px * var(--svg-scale));
+  /* Exact SVG pixel metrics (artboard 1853.96px). Scaled only on
+     narrow desktops so proportions always match the design. */
+  --svg-scale: 1;
+  --font-title: calc(24px * var(--svg-scale));
+  --font-body: calc(24px * var(--svg-scale));
+  --font-nav: calc(24px * var(--svg-scale));
+  --row-gap: calc(4px * var(--svg-scale));
   --selected-bg: #f2f2f2;
   --selected-height: calc(38.31px * var(--svg-scale));
   --selected-bar-width: calc(4px * var(--svg-scale));
@@ -86,7 +87,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: calc(67px * var(--svg-scale));
+  gap: calc(53.92px * var(--svg-scale));
   justify-content: center;
   align-items: flex-start;
 }
@@ -113,6 +114,7 @@
 .columnCapacity {
   width: calc(104.12px * var(--svg-scale));
   flex: 0 0 calc(104.12px * var(--svg-scale));
+  margin-left: calc(12.71px * var(--svg-scale));
 }
 
 .listItem {
@@ -490,5 +492,11 @@
 
   .mobile {
     display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  .page {
+    --svg-scale: 0.82;
   }
 }
