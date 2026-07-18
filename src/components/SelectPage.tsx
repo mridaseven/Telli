@@ -57,16 +57,6 @@ export default function SelectPage() {
     setForm((prev) => ({ ...prev, [field]: value }));
   };
 
-  const renderSpacedWords = (text: string) => {
-    const words = text.split(" ");
-    return words.map((word, index) => (
-      <span key={`${word}-${index}`} className={styles.listWord}>
-        {word}
-        {index < words.length - 1 ? "\u00a0" : ""}
-      </span>
-    ));
-  };
-
   const renderDesktopListItem = (
     item: string,
     isSelected: boolean,
@@ -82,7 +72,7 @@ export default function SelectPage() {
       {isSelected ? (
         <span className={styles.selectedBar} aria-hidden="true" />
       ) : null}
-      <span className={styles.listItemText}>{renderSpacedWords(item)}</span>
+      <span className={styles.listItemText}>{item}</span>
     </li>
   );
 
@@ -216,27 +206,28 @@ export default function SelectPage() {
     <div className={styles.page}>
       <div className={styles.desktop}>
         <header className={styles.selectHeader}>
-          <h2 className={styles.sectionTitle}>
-            <span className={styles.titleWord}>Select</span>
-            <span className={styles.titleWordBold}>iPhone</span>
-          </h2>
+            <h2 className={styles.sectionTitle}>
+              <span className={styles.titleWord}>Select </span>
+              <span className={styles.titleWordBold}>iPhone</span>
+            </h2>
           <div className={styles.titleUnderline} aria-hidden="true" />
         </header>
         <section className={styles.selectSection}>
           {renderDesktopColumns()}
         </section>
-        <nav className={styles.desktopNav} aria-label="Selection navigation">
-          <button type="button" className={styles.desktopNavPrev}>
-            <span className={styles.desktopNavLabel}>Prev</span>
-            <span className={styles.desktopNavUnderline} aria-hidden="true" />
-          </button>
-          <span className={styles.desktopNavDivider} aria-hidden="true" />
-          <button type="button" className={styles.desktopNavNext}>
-            <span className={styles.desktopNavLabel}>Next</span>
-            <span className={styles.desktopNavUnderline} aria-hidden="true" />
-          </button>
-        </nav>
       </div>
+
+      <nav className={styles.desktopNav} aria-label="Selection navigation">
+        <button type="button" className={styles.desktopNavPrev}>
+          <span className={styles.desktopNavLabel}>Prev</span>
+          <span className={styles.desktopNavUnderline} aria-hidden="true" />
+        </button>
+        <span className={styles.desktopNavDivider} aria-hidden="true" />
+        <button type="button" className={styles.desktopNavNext}>
+          <span className={styles.desktopNavLabel}>Next</span>
+          <span className={styles.desktopNavUnderline} aria-hidden="true" />
+        </button>
+      </nav>
 
       <div className={styles.mobile}>
         {mobileStep !== "checkout" ? (

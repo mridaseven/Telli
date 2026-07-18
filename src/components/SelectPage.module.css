@@ -6,13 +6,12 @@
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
 
-  /* Shared scale for desktop select + nav */
-  --svg-scale: clamp(0.72, (100vw - 48px) / 1853.96, 0.82);
-  --font-title: calc(24px * var(--svg-scale));
-  --font-body: calc(24px * var(--svg-scale));
-  --font-nav: calc(26.4px * var(--svg-scale));
-  --row-gap: calc(32px * var(--svg-scale));
-  --word-gap: 0.45em;
+  /* Layout scale from SVG artboard (1853.96px wide) */
+  --svg-scale: clamp(0.8, (100vw - 64px) / 1853.96, 1);
+  --font-title: 24px;
+  --font-body: 24px;
+  --font-nav: 26.4px;
+  --row-gap: calc(22px * var(--svg-scale));
   --selected-bg: #f2f2f2;
   --selected-height: calc(38.31px * var(--svg-scale));
   --selected-bar-width: calc(4px * var(--svg-scale));
@@ -20,22 +19,17 @@
   --selected-text-indent: calc(17.36px * var(--svg-scale));
 }
 
-/* ── Desktop layout (matches reference PNG) ── */
+/* ── Desktop layout (matches reference PNG / SVG) ── */
 .desktop {
   display: none;
-  position: relative;
   width: 100%;
   min-height: 100vh;
-  padding: 0 32px 32px;
+  padding: 0 calc(32px * var(--svg-scale));
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
-  grid-template-rows: min-content 1fr auto;
+  grid-template-rows: auto 1fr;
   grid-template-columns: 1fr;
-
-  --color-select-bg: var(--selected-bg);
-  --accent-bar-width: var(--selected-bar-width);
-  --accent-bar-height: var(--selected-bar-height);
 }
 
 .selectHeader {
@@ -44,11 +38,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: auto;
+  padding-top: calc(12vh);
   margin: 0;
-  padding-top: calc(14vh);
-  position: relative;
-  z-index: 2;
 }
 
 .selectSection {
@@ -59,7 +50,6 @@
   align-items: center;
   width: calc(604.8px * var(--svg-scale));
   max-width: 100%;
-  margin: 0;
 }
 
 .selectHeader .sectionTitle {
@@ -70,11 +60,8 @@
   text-align: center;
   margin: 0;
   letter-spacing: 0;
-  line-height: var(--font-title);
+  line-height: 1;
   white-space: nowrap;
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.28em;
 }
 
 .titleWord {
@@ -90,21 +77,18 @@
 .titleUnderline {
   display: block;
   width: calc(164.68px * var(--svg-scale));
-  height: 3px;
-  min-height: 3px;
+  height: max(calc(2.9px * var(--svg-scale)), 2px);
   background: #010101;
   margin: calc(15px * var(--svg-scale)) auto 0;
-  flex-shrink: 0;
 }
 
 .columns {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: calc(54px * var(--svg-scale)) calc(67px * var(--svg-scale));
+  gap: calc(67px * var(--svg-scale));
   justify-content: center;
   align-items: flex-start;
-  text-align: left;
 }
 
 .column {
@@ -139,40 +123,27 @@
   line-height: var(--font-body);
   width: 100%;
   min-height: var(--selected-height);
-  padding: 0 0 0 var(--selected-text-indent);
+  padding: 0 calc(4px * var(--svg-scale)) 0 var(--selected-text-indent);
   margin: 0;
   cursor: pointer;
   position: relative;
   white-space: nowrap;
   color: #010101;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   align-items: center;
   box-sizing: border-box;
-  -webkit-font-smoothing: none;
+  letter-spacing: 0;
+  word-spacing: normal;
+  -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
-  -webkit-text-stroke: 0.3px #010101;
-  paint-order: stroke fill;
 }
 
 .listItemText {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: var(--word-gap);
-}
-
-.listWord {
-  display: inline-block;
+  display: block;
 }
 
 .listItemSelected {
   background: var(--selected-bg);
-  min-height: var(--selected-height);
-  padding: 0 calc(8px * var(--svg-scale)) 0 var(--selected-text-indent);
-  line-height: var(--font-body);
 }
 
 .selectedBar {
@@ -183,25 +154,19 @@
   width: var(--selected-bar-width);
   height: var(--selected-bar-height);
   background: #010101;
-  flex-shrink: 0;
   pointer-events: none;
 }
 
 .desktopNav {
-  --font-nav: calc(26.4px * var(--svg-scale));
-
-  grid-row: 3;
-  justify-self: end;
-  align-self: end;
-  display: flex;
+  display: none;
+  position: fixed;
+  right: calc(48px * var(--svg-scale));
+  bottom: calc(40px * var(--svg-scale));
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  width: auto;
-  margin: 0;
-  padding: 0;
   font-family: "Myriad Pro", Myriad, Arial, sans-serif;
-  z-index: 10;
+  z-index: 1000;
 }
 
 .desktopNavPrev,
@@ -215,16 +180,16 @@
   cursor: pointer;
   color: #010101;
   font-family: "Myriad Pro", Myriad, Arial, sans-serif;
-  -webkit-font-smoothing: none;
+  -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
 }
 
 .desktopNavLabel {
   font-size: var(--font-nav);
   font-weight: 400;
-  line-height: var(--font-nav);
+  line-height: 1;
   transform: scaleX(1.1);
-  transform-origin: left center;
+  transform-origin: left bottom;
 }
 
 .desktopNavPrev .desktopNavLabel {
@@ -260,7 +225,6 @@
   background: #010101;
   flex-shrink: 0;
   margin: 0 calc(10px * var(--svg-scale));
-  align-self: center;
 }
 
 .checkoutSection {
@@ -518,6 +482,10 @@
   .desktop {
     display: grid;
     min-height: 100vh;
+  }
+
+  .desktopNav {
+    display: flex;
   }
 
   .mobile {
