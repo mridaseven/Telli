@@ -9,8 +9,8 @@ export default function LandingPage() {
       <div className={styles.frame}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/designs/Telli.svg"
-          alt="Telli — As good as new. As simple as it gets."
+          src="/designs/Phonem.svg"
+          alt="Phonem — As good as new. As simple as it gets."
           className={styles.art}
         />
         <Link
