@@ -5,9 +5,10 @@
   position: relative;
 }
 
-/* Desktop — exact 1:1 reproduction of Telli.svg (1920×1080). */
+/* Desktop — exact 1:1 reproduction of Telli.svg (1920×1080).
+   Shown at every screen size; scales to fit the viewport width. */
 .desktop {
-  display: none;
+  display: flex;
   width: 100%;
   min-height: 100vh;
   background: #000;
@@ -18,7 +19,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
 
-  --s: clamp(0.3, calc(100vw / 1920px), 1);
+  --s: calc(100vw / 1920px);
 }
 
 .board {
@@ -86,9 +87,9 @@
   background: #fff;
 }
 
-/* Mobile layout — matches Telli Mobile.svg (1202×1308) */
+/* Mobile layout (hidden — the SVG homepage is shown at all sizes) */
 .mobile {
-  display: block;
+  display: none;
   min-height: 100vh;
   background: #fff;
   color: #231f20;
@@ -161,19 +162,3 @@
   line-height: 1.3;
 }
 
-@media (min-width: 1024px) {
-  .desktop {
-    display: block;
-  }
-
-  .mobile {
-    display: none;
-  }
-}
-
-@media (max-width: 1023px) {
-  .landing {
-    background: #fff;
-    color: #231f20;
-  }
-}
