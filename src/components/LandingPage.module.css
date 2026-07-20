@@ -9,7 +9,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
 
-  --s: calc(100vw / 1920px);
+  --s: calc(100vw / 1920px * 0.9);
 }
 
 /* Phonem homepage — proportional to the SVG (1920×1080). */
@@ -24,8 +24,8 @@
 .brand {
   position: absolute;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  font-size: calc(21px * var(--s));
+  font-weight: 500;
+  font-size: calc(18px * var(--s));
   line-height: 1;
   white-space: nowrap;
   color: #fff;
