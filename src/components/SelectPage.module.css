@@ -4,37 +4,41 @@
   color: #010101;
 }
 
-/* ── Desktop: exact 1:1 reproduction of "Telli select page.svg" ──
-   The whole artboard (1853.96px wide) is scaled uniformly by --s so
-   every position, size and font matches the design exactly. */
+/* ── Desktop: "Select iPhone" page from Telli select page.svg ── */
 .desktop {
   display: none;
   width: 100%;
   min-height: 100vh;
-  overflow-x: hidden;
+  padding: 12vh 48px 48px;
+  flex-direction: column;
+  align-items: center;
+  color: #010101;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: geometricPrecision;
+  text-rendering: optimizeLegibility;
 
-  --s: clamp(0.42, calc((100vw - 24px) / 1853.96px), 0.86);
+  --fs-body: clamp(15px, 1.3vw, 20px);
+  --fs-title: clamp(17px, 1.45vw, 22px);
+  --fs-nav: clamp(17px, 1.4vw, 21px);
+  --row-height: clamp(30px, 2.5vw, 38px);
+  --row-gap: clamp(8px, 0.8vw, 12px);
+  --bar-height: clamp(22px, 1.9vw, 30px);
 }
 
-.artboard {
-  position: relative;
-  width: calc(1853.96px * var(--s));
-  height: calc(2075px * var(--s));
-  margin: 0 auto;
-  color: #010101;
+.selectWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title {
-  position: absolute;
   margin: 0;
   font-family: "Arial MT", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: calc(24px * var(--s));
+  font-size: var(--fs-title);
   line-height: 1;
   white-space: nowrap;
+  text-align: center;
 }
 
 .titleBold {
@@ -42,82 +46,123 @@
   font-weight: 700;
 }
 
-.line {
-  position: absolute;
+.titleUnderline {
+  width: 150px;
+  height: 3px;
   background: #010101;
+  margin: 14px auto 90px;
 }
 
-.cell {
-  position: absolute;
-  padding: 0;
+.columns {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 56px;
+}
+
+.col {
+  list-style: none;
   margin: 0;
-  border: none;
-  background: none;
-  color: #010101;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--row-gap);
+}
+
+.colModels {
+  width: clamp(190px, 16vw, 232px);
+}
+
+.colColors {
+  width: clamp(118px, 9.5vw, 138px);
+}
+
+.colCaps {
+  width: clamp(90px, 7.5vw, 106px);
+}
+
+.listItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: var(--row-height);
+  padding-left: 17px;
   font-family: "Arial MT", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: calc(24px * var(--s));
+  font-size: var(--fs-body);
   line-height: 1;
   white-space: nowrap;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.hiBox {
-  position: absolute;
-  background: #f2f2f2;
-  z-index: 0;
-}
-
-.hiBar {
-  position: absolute;
-  background: #010101;
-  z-index: 1;
-}
-
-.field {
-  position: absolute;
-  margin: 0;
-  border: none;
-  border-bottom: max(1.5px, calc(1.95px * var(--s))) solid gray;
-  background: transparent;
   color: #010101;
-  font-family: "Arial MT", Arial, Helvetica, sans-serif;
-  font-size: calc(24px * var(--s));
-  line-height: 1;
-  padding: 0 0 calc(4px * var(--s)) calc(2.54px * var(--s));
-  box-sizing: border-box;
-  outline: none;
+  cursor: pointer;
 }
 
-.field::placeholder {
-  color: gray;
-  opacity: 1;
+.listItemSelected {
+  background: #f2f2f2;
 }
 
-.field:focus {
-  border-bottom-color: #010101;
+.bar {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: var(--bar-height);
+  background: #010101;
+}
+
+.cellText {
+  display: inline-block;
+}
+
+.nav {
+  position: fixed;
+  right: 44px;
+  bottom: 34px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 1000;
 }
 
 .navBtn {
-  position: absolute;
-  padding: 0;
+  position: relative;
+  padding: 0 0 5px;
   margin: 0;
   border: none;
   background: none;
   color: #010101;
   cursor: pointer;
   line-height: 1;
+}
+
+.navBtn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #010101;
 }
 
 .navLabel {
   display: inline-block;
   font-family: "Myriad Pro", Myriad, Arial, sans-serif;
   font-weight: 400;
-  font-size: calc(24px * var(--s));
+  font-size: var(--fs-nav);
   line-height: 1;
   transform: scaleX(1.1);
-  transform-origin: left top;
+  transform-origin: left center;
+}
+
+.navDivider {
+  display: block;
+  width: 2px;
+  height: clamp(24px, 2vw, 31px);
+  background: #010101;
+  margin: 0 14px;
+  align-self: center;
 }
 
 /* ── Mobile layout (step-by-step) ── */
@@ -279,9 +324,9 @@
   background: #010101;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .desktop {
-    display: block;
+    display: flex;
   }
 
   .mobile {
