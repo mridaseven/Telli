@@ -57,7 +57,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  gap: calc(53.92px * var(--s));
+  gap: round(calc(53.92px * var(--s)), 1px);
 }
 
 .col {
@@ -70,16 +70,16 @@
 }
 
 .colModels {
-  width: calc(230.24px * var(--s));
+  width: round(calc(230.24px * var(--s)), 1px);
 }
 
 .colColors {
-  width: calc(136.44px * var(--s));
+  width: round(calc(136.44px * var(--s)), 1px);
 }
 
 .colCaps {
-  width: calc(104.12px * var(--s));
-  margin-left: calc(12.71px * var(--s));
+  width: round(calc(104.12px * var(--s)), 1px);
+  margin-left: round(calc(12.71px * var(--s)), 1px);
 }
 
 .listItem {
