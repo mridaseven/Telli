@@ -36,6 +36,8 @@
   line-height: 1;
   white-space: nowrap;
   text-align: center;
+  -webkit-text-stroke: 0.25px #010101;
+  paint-order: stroke fill;
 }
 
 .titleBold {
@@ -93,6 +95,8 @@
   white-space: nowrap;
   color: #010101;
   cursor: pointer;
+  -webkit-text-stroke: 0.25px #010101;
+  paint-order: stroke fill;
 }
 
 .listItemSelected {
