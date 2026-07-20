@@ -163,17 +163,17 @@
 
 .navUnderlinePrev {
   width: calc(51.21px * var(--s));
-  height: 2px;
+  height: 3px;
 }
 
 .navUnderlineNext {
   width: calc(60.27px * var(--s));
-  height: 2px;
+  height: 3px;
 }
 
 .navDivider {
   display: block;
-  width: max(1.5px, calc(1.37px * var(--s)));
+  width: 3px;
   height: calc(31.51px * var(--s));
   background: #010101;
   margin: 0 calc(10px * var(--s));
