@@ -4,12 +4,14 @@
   color: #010101;
 }
 
-/* ── Desktop: "Select iPhone" page from Telli select page.svg ── */
+/* ── Desktop: "Select iPhone" page, proportional to Telli select page.svg ──
+   Every size is an exact SVG pixel value multiplied by one scale (--s),
+   so the whole layout stays proportional to the design at any width. */
 .desktop {
   display: none;
   width: 100%;
   min-height: 100vh;
-  padding: 12vh 48px 48px;
+  padding: 11vh 40px 40px;
   flex-direction: column;
   align-items: center;
   color: #010101;
@@ -17,12 +19,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 
-  --fs-body: clamp(15px, 1.3vw, 20px);
-  --fs-title: clamp(17px, 1.45vw, 22px);
-  --fs-nav: clamp(17px, 1.4vw, 21px);
-  --row-height: clamp(30px, 2.5vw, 38px);
-  --row-gap: clamp(8px, 0.8vw, 12px);
-  --bar-height: clamp(22px, 1.9vw, 30px);
+  --s: clamp(0.46, calc((100vw - 96px) / 1853.96px), 0.6);
 }
 
 .selectWrap {
@@ -35,7 +32,7 @@
   margin: 0;
   font-family: "Arial MT", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: var(--fs-title);
+  font-size: calc(24px * var(--s));
   line-height: 1;
   white-space: nowrap;
   text-align: center;
@@ -47,10 +44,10 @@
 }
 
 .titleUnderline {
-  width: 150px;
-  height: 3px;
+  width: calc(164.68px * var(--s));
+  height: max(2px, calc(2.9px * var(--s)));
   background: #010101;
-  margin: 14px auto 90px;
+  margin: calc(15px * var(--s)) auto calc(200px * var(--s));
 }
 
 .columns {
@@ -58,7 +55,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  gap: 56px;
+  gap: calc(53.92px * var(--s));
 }
 
 .col {
@@ -67,30 +64,31 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--row-gap);
+  gap: calc(2.47px * var(--s));
 }
 
 .colModels {
-  width: clamp(190px, 16vw, 232px);
+  width: calc(230.24px * var(--s));
 }
 
 .colColors {
-  width: clamp(118px, 9.5vw, 138px);
+  width: calc(136.44px * var(--s));
 }
 
 .colCaps {
-  width: clamp(90px, 7.5vw, 106px);
+  width: calc(104.12px * var(--s));
+  margin-left: calc(12.71px * var(--s));
 }
 
 .listItem {
   position: relative;
   display: flex;
   align-items: center;
-  height: var(--row-height);
-  padding-left: 17px;
+  height: calc(38.31px * var(--s));
+  padding-left: calc(17.36px * var(--s));
   font-family: "Arial MT", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: var(--fs-body);
+  font-size: calc(24px * var(--s));
   line-height: 1;
   white-space: nowrap;
   color: #010101;
@@ -106,8 +104,8 @@
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 4px;
-  height: var(--bar-height);
+  width: max(2px, calc(4px * var(--s)));
+  height: calc(34.17px * var(--s));
   background: #010101;
 }
 
@@ -123,11 +121,13 @@
   flex-direction: row;
   align-items: center;
   z-index: 1000;
+
+  --s: clamp(0.46, calc((100vw - 96px) / 1853.96px), 0.6);
 }
 
 .navBtn {
   position: relative;
-  padding: 0 0 5px;
+  padding: 0 0 calc(6px * var(--s));
   margin: 0;
   border: none;
   background: none;
@@ -142,7 +142,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 2px;
+  height: max(1.5px, calc(1.76px * var(--s)));
   background: #010101;
 }
 
@@ -150,7 +150,7 @@
   display: inline-block;
   font-family: "Myriad Pro", Myriad, Arial, sans-serif;
   font-weight: 400;
-  font-size: var(--fs-nav);
+  font-size: calc(24px * var(--s));
   line-height: 1;
   transform: scaleX(1.1);
   transform-origin: left center;
@@ -158,10 +158,10 @@
 
 .navDivider {
   display: block;
-  width: 2px;
-  height: clamp(24px, 2vw, 31px);
+  width: max(1.5px, calc(1.37px * var(--s)));
+  height: calc(31.51px * var(--s));
   background: #010101;
-  margin: 0 14px;
+  margin: 0 calc(10px * var(--s));
   align-self: center;
 }
 
