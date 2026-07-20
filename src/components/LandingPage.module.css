@@ -1,164 +1,30 @@
 .landing {
   min-height: 100vh;
   background: #000;
-  color: #fff;
-  position: relative;
-}
-
-/* Desktop — exact 1:1 reproduction of Telli.svg (1920×1080).
-   Shown at every screen size; scales to fit the viewport width. */
-.desktop {
   display: flex;
-  width: 100%;
-  min-height: 100vh;
-  background: #000;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: geometricPrecision;
-
-  --s: calc(100vw / 1920px);
 }
 
-.board {
+/* Show Telli.svg exactly as the file, fit to the viewport (16:9). */
+.frame {
   position: relative;
-  width: calc(1920px * var(--s));
-  height: calc(1080px * var(--s));
-  flex-shrink: 0;
-  color: #fff;
+  width: min(100vw, calc(100vh * (1920 / 1080)));
+  aspect-ratio: 1920 / 1080;
 }
 
-.brand {
+.art {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Clickable "Launch" area (from the SVG's Launch position). */
+.launchHit {
   position: absolute;
-  font-family: "Arial Bold", "Arial-BoldMT", Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  font-size: calc(21px * var(--s));
-  line-height: 1;
-  white-space: nowrap;
-  color: #fff;
-  transform: scaleX(1.02);
-  transform-origin: left center;
+  left: 9%;
+  top: 40%;
+  width: 7%;
+  height: 5%;
 }
-
-.navHelp,
-.navAbout {
-  position: absolute;
-  font-family: "Arial MT", Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: calc(21px * var(--s));
-  line-height: 1;
-  white-space: nowrap;
-  color: #fff;
-}
-
-.navHelp {
-  transform: scaleX(1.11);
-  transform-origin: left center;
-}
-
-.headline {
-  position: absolute;
-  margin: 0;
-  font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
-  font-weight: 700;
-  font-size: calc(48px * var(--s));
-  line-height: 1;
-  white-space: nowrap;
-  color: #fff;
-}
-
-.launch {
-  position: absolute;
-  display: inline-block;
-  font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
-  font-weight: 700;
-  font-size: calc(24.67px * var(--s));
-  line-height: 1;
-  white-space: nowrap;
-  color: #fff;
-  transform: scaleX(1.01);
-  transform-origin: left center;
-}
-
-.launchLine {
-  position: absolute;
-  background: #fff;
-}
-
-/* Mobile layout (hidden — the SVG homepage is shown at all sizes) */
-.mobile {
-  display: none;
-  min-height: 100vh;
-  background: #fff;
-  color: #231f20;
-  position: relative;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-
-  --font-brand: 16px;
-  --font-nav: 16px;
-  --font-welcome: 26px;
-}
-
-.mobileFrame {
-  margin: 38px auto 0;
-  width: min(612px, calc(100% - 40px));
-  min-height: 792px;
-  border: 1px solid #231f20;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.menuButton {
-  position: absolute;
-  top: 60px;
-  left: 80px;
-  width: 11px;
-  height: 13px;
-  border: 1px solid #231f20;
-  background: #231f20;
-}
-
-.mobileBrand {
-  margin-top: 253px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: var(--font-brand);
-  font-weight: 500;
-  letter-spacing: 0;
-}
-
-.mobileNav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 28px;
-  gap: 36px;
-}
-
-.mobileNavItem {
-  font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
-  font-size: var(--font-nav);
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  line-height: 1.4;
-}
-
-.mobileNavItemLaunch {
-  composes: mobileNavItem;
-}
-
-.mobileWelcome {
-  margin-top: auto;
-  padding-bottom: 15px;
-  font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
-  font-size: var(--font-welcome);
-  font-weight: 600;
-  letter-spacing: 0;
-  line-height: 1.3;
-}
-
