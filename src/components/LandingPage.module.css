@@ -5,85 +5,84 @@
   position: relative;
 }
 
-/* Desktop layout — matches Telli.svg (1920×1080) */
+/* Desktop — exact 1:1 reproduction of Telli.svg (1920×1080). */
 .desktop {
   display: none;
+  width: 100%;
   min-height: 100vh;
-  position: relative;
+  background: #000;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
 
-  /* Smaller, clearer sizes — same font families */
-  --font-brand: 15px;
-  --font-headline: 30px;
-  --font-cta: 16px;
+  --s: clamp(0.3, calc(100vw / 1920px), 1);
 }
 
-.header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 52px 100px 0;
+.board {
+  position: relative;
+  width: calc(1920px * var(--s));
+  height: calc(1080px * var(--s));
+  flex-shrink: 0;
+  color: #fff;
 }
 
 .brand {
-  font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
-  font-size: var(--font-brand);
-  font-weight: 600;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: var(--font-brand);
-  font-weight: 400;
-}
-
-.navDivider {
-  margin: 0 0.35em;
-}
-
-.hero {
   position: absolute;
-  left: 150px;
-  top: 330px;
-  max-width: 860px;
+  font-family: "Arial Bold", "Arial-BoldMT", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: calc(21px * var(--s));
+  line-height: 1;
+  white-space: nowrap;
+  color: #fff;
+  transform: scaleX(1.02);
+  transform-origin: left center;
+}
+
+.navHelp,
+.navAbout {
+  position: absolute;
+  font-family: "Arial MT", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: calc(21px * var(--s));
+  line-height: 1;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.navHelp {
+  transform: scaleX(1.11);
+  transform-origin: left center;
 }
 
 .headline {
+  position: absolute;
+  margin: 0;
   font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
-  font-size: var(--font-headline);
-  font-weight: 600;
-  line-height: 1.35;
-  letter-spacing: -0.01em;
-}
-
-.ctaGroup {
-  margin-top: 20px;
-  margin-left: 6px;
+  font-weight: 700;
+  font-size: calc(48px * var(--s));
+  line-height: 1;
+  white-space: nowrap;
+  color: #fff;
 }
 
 .launch {
+  position: absolute;
   display: inline-block;
   font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
-  font-size: var(--font-cta);
-  position: relative;
-  padding-bottom: 7px;
+  font-weight: 700;
+  font-size: calc(24.67px * var(--s));
+  line-height: 1;
+  white-space: nowrap;
+  color: #fff;
+  transform: scaleX(1.01);
+  transform-origin: left center;
 }
 
-.launchUnderline {
+.launchLine {
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 64px;
-  height: 1.5px;
   background: #fff;
 }
 
