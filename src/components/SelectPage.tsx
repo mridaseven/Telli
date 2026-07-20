@@ -127,12 +127,20 @@ export default function SelectPage() {
       </div>
 
       <nav className={styles.nav} aria-label="Selection navigation">
-        <button type="button" className={styles.navBtn}>
+        <a href="/" className={styles.navBtn}>
           <span className={styles.navLabel}>Prev</span>
-        </button>
+          <span
+            className={`${styles.navUnderline} ${styles.navUnderlinePrev}`}
+            aria-hidden="true"
+          />
+        </a>
         <span className={styles.navDivider} aria-hidden="true" />
         <button type="button" className={styles.navBtn}>
           <span className={styles.navLabel}>Next</span>
+          <span
+            className={`${styles.navUnderline} ${styles.navUnderlineNext}`}
+            aria-hidden="true"
+          />
         </button>
       </nav>
     </>
