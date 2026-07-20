@@ -151,6 +151,8 @@
   line-height: 1;
   transform: scaleX(1.1);
   transform-origin: left center;
+  -webkit-text-stroke: 0.3px #010101;
+  paint-order: stroke fill;
 }
 
 .navUnderline {
@@ -161,12 +163,12 @@
 
 .navUnderlinePrev {
   width: calc(51.21px * var(--s));
-  height: max(1.5px, calc(1.76px * var(--s)));
+  height: 2px;
 }
 
 .navUnderlineNext {
   width: calc(60.27px * var(--s));
-  height: max(1.5px, calc(1.37px * var(--s)));
+  height: 2px;
 }
 
 .navDivider {
