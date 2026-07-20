@@ -5,26 +5,75 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+
+  --s: calc(100vw / 1920px);
 }
 
-/* Show Telli.svg exactly as the file, fit to the viewport (16:9). */
-.frame {
+/* Phonem homepage — proportional to the SVG (1920×1080). */
+.board {
   position: relative;
-  width: min(100vw, calc(100vh * (1920 / 1080)));
-  aspect-ratio: 1920 / 1080;
+  width: calc(1920px * var(--s));
+  height: calc(1080px * var(--s));
+  flex-shrink: 0;
+  color: #fff;
 }
 
-.art {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-/* Clickable "Launch" area (from the SVG's Launch position). */
-.launchHit {
+.brand {
   position: absolute;
-  left: 9%;
-  top: 40%;
-  width: 7%;
-  height: 5%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: calc(21px * var(--s));
+  line-height: 1;
+  white-space: nowrap;
+  color: #fff;
+  transform: scaleX(1.02);
+  transform-origin: left center;
+}
+
+.navHelp,
+.navAbout {
+  position: absolute;
+  font-family: "Arial MT", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: calc(21px * var(--s));
+  line-height: 1;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.navHelp {
+  transform: scaleX(1.11);
+  transform-origin: left center;
+}
+
+.headline {
+  position: absolute;
+  margin: 0;
+  font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
+  font-weight: 700;
+  font-size: calc(48px * var(--s));
+  line-height: 1;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.launch {
+  position: absolute;
+  display: inline-block;
+  font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
+  font-weight: 700;
+  font-size: calc(24.67px * var(--s));
+  line-height: 1;
+  white-space: nowrap;
+  color: #fff;
+  transform: scaleX(1.01);
+  transform-origin: left center;
+}
+
+.launchLine {
+  position: absolute;
+  background: #fff;
 }
