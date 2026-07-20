@@ -126,7 +126,7 @@
   align-items: center;
   z-index: 1000;
 
-  --s: clamp(0.46, calc((100vw - 96px) / 1853.96px), 0.6);
+  --s: clamp(0.4, calc((100vw - 96px) / 1853.96px), 0.52);
 }
 
 .navBtn {
