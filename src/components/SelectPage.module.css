@@ -108,7 +108,7 @@
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: max(2px, calc(4px * var(--s)));
+  width: 4px;
   height: calc(34.17px * var(--s));
   background: #010101;
 }
