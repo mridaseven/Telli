@@ -47,7 +47,7 @@
 
 .titleUnderline {
   width: calc(164.68px * var(--s));
-  height: max(3px, calc(3.9px * var(--s)));
+  height: 5px;
   background: #010101;
   margin: calc(15px * var(--s)) auto calc(200px * var(--s));
 }
