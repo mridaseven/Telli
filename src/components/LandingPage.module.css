@@ -9,7 +9,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
 
-  --s: calc(100vw / 1920px);
+  --s: calc(100vw / 1920px * 0.92);
 }
 
 /* Phonem homepage — proportional to the SVG (1920×1080). */
