@@ -166,12 +166,12 @@
 
 .navUnderlinePrev {
   width: calc(57px * var(--s));
-  height: 1.5px;
+  height: 2px;
 }
 
 .navUnderlineNext {
   width: calc(60.27px * var(--s));
-  height: 1.5px;
+  height: 2px;
 }
 
 .navDivider {
