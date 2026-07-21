@@ -282,29 +282,29 @@ export default function SelectPage() {
               {renderCheckoutForm(true)}
             </section>
           )}
-
-          {mobileStep !== "checkout" ? (
-            <nav className={styles.mobileNav}>
-              <button
-                type="button"
-                onClick={goPrev}
-                disabled={mobileStepIndex === 0}
-              >
-                Prev
-              </button>
-              <span className={styles.mobileNavDivider}>|</span>
-              <button type="button" onClick={goNext}>
-                Next
-              </button>
-            </nav>
-          ) : (
-            <nav className={styles.mobileNav}>
-              <button type="button" onClick={goPrev}>
-                Prev
-              </button>
-            </nav>
-          )}
         </div>
+
+        {mobileStep !== "checkout" ? (
+          <nav className={styles.mobileNav}>
+            <button
+              type="button"
+              onClick={goPrev}
+              disabled={mobileStepIndex === 0}
+            >
+              Prev
+            </button>
+            <span className={styles.mobileNavDivider}>|</span>
+            <button type="button" onClick={goNext}>
+              Next
+            </button>
+          </nav>
+        ) : (
+          <nav className={styles.mobileNav}>
+            <button type="button" onClick={goPrev}>
+              Prev
+            </button>
+          </nav>
+        )}
       </div>
     </div>
   );
