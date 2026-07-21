@@ -74,13 +74,16 @@
   background: #fff;
 }
 
-/* ── Mobile (black page, centered brand + nav — from the PNG) ── */
+/* ── Mobile (black page, centered brand + nav — from the PNG) ──
+   Fixed to cover the whole viewport so there is never any white space
+   below (e.g. from the mobile address bar). */
 .mobile {
+  position: fixed;
+  inset: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   background: #000;
   color: #fff;
   padding: 0 24px;
