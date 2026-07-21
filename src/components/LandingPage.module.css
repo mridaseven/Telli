@@ -1,5 +1,5 @@
 .landing {
-  min-height: 100vh;
+  height: 100vh;
   background: #000;
   display: flex;
   align-items: center;
@@ -9,7 +9,9 @@
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
 
-  --s: calc(100vw / 1920px * 0.92);
+  /* Fit the 1920×1080 board within the viewport (width AND height) so
+     the page never needs to scroll. */
+  --s: calc(min(100vw / 1920px, 100vh / 1080px) * 0.92);
 }
 
 /* Phonem homepage — proportional to the SVG (1920×1080). */
