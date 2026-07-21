@@ -188,19 +188,21 @@
   align-self: center;
 }
 
-/* ── Mobile layout (step-by-step) ── */
+/* ── Mobile layout (step-by-step) — matches the mobile PNGs ── */
 .mobile {
   display: block;
-  padding: 18px 10px 30px;
+  padding: 22px 16px 30px;
   min-height: 100vh;
+  background: #fff;
+  color: #010101;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 
-  --font-title: 15px;
-  --font-body: 14px;
-  --font-label: 12px;
-  --font-nav: 13px;
+  --font-title: 24px;
+  --font-body: 21px;
+  --font-label: 13px;
+  --font-nav: 18px;
 }
 
 .mobileHeader {
@@ -211,33 +213,40 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: var(--font-title);
   color: #010101;
-  margin-left: 16px;
+  margin-left: 10px;
   font-weight: 400;
   letter-spacing: 0.01em;
 }
 
 .mobileTitleBold {
   font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
+  font-weight: 700;
 }
 
 .mobileTitleUnderline {
-  width: 140px;
-  height: 2px;
+  width: 165px;
+  height: 3px;
   background: #010101;
   margin-top: 12px;
-  margin-left: 10px;
+  margin-left: 0;
 }
 
 .mobileList {
   list-style: none;
-  margin-top: 100px;
+  margin: 0;
+  padding: 0;
+  margin-top: 90px;
 }
 
 .mobileListItem {
   font-family: Arial, Helvetica, sans-serif;
   font-size: var(--font-body);
-  line-height: 1.6;
-  padding: 6px 0 6px 12px;
+  line-height: 1;
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 12px;
+  margin-bottom: 12px;
   cursor: pointer;
   position: relative;
 }
@@ -252,29 +261,46 @@
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 3px;
-  height: 20px;
+  width: 4px;
+  height: 30px;
   background: #010101;
 }
 
 .mobileNav {
   position: fixed;
-  bottom: 20px;
+  bottom: 22px;
   right: 20px;
   font-family: "Myriad Pro", Myriad, Arial, sans-serif;
   font-size: var(--font-nav);
   display: flex;
+  align-items: center;
   gap: 8px;
   letter-spacing: 0.02em;
 }
 
 .mobileNav button {
   position: relative;
-  padding-bottom: 4px;
+  padding-bottom: 5px;
+  color: #010101;
+}
+
+.mobileNav button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #010101;
+}
+
+.mobileNav button:disabled {
+  opacity: 0.35;
 }
 
 .mobileNavDivider {
   margin: 0 4px;
+  padding-bottom: 5px;
 }
 
 .mobileCheckout {

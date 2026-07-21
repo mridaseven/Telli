@@ -3,7 +3,7 @@
 import { useState } from "react";
 import {
   IPHONE_MODELS_MOBILE,
-  COLORS,
+  COLORS_MOBILE,
   CAPACITIES_MOBILE,
   DEFAULT_SELECTION_DESKTOP,
   DEFAULT_SELECTION_MOBILE,
@@ -265,7 +265,7 @@ export default function SelectPage() {
 
             {mobileStep === "model" &&
               renderMobileList(IPHONE_MODELS_MOBILE, "model")}
-            {mobileStep === "color" && renderMobileList(COLORS, "color")}
+            {mobileStep === "color" && renderMobileList(COLORS_MOBILE, "color")}
             {mobileStep === "capacity" &&
               renderMobileList(CAPACITIES_MOBILE, "capacity")}
           </>
