@@ -74,80 +74,55 @@
   background: #fff;
 }
 
-/* ── Mobile (Phonem mobile SVG — framed mockup) ── */
+/* ── Mobile (dark page, centered brand + nav — from the PNG) ── */
 .mobile {
-  display: block;
-  min-height: 100vh;
-  background: #fff;
-  color: #231f20;
-  position: relative;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-
-  --font-brand: 16px;
-  --font-nav: 16px;
-  --font-welcome: 26px;
-}
-
-.mobileFrame {
-  margin: 38px auto 0;
-  width: min(612px, calc(100% - 40px));
-  min-height: min(792px, calc(100vh - 76px));
-  border: 1px solid #231f20;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #231f20;
+  color: #fff;
+  padding: 0 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-.menuButton {
-  position: absolute;
-  top: 60px;
-  left: 12%;
-  width: 11px;
-  height: 13px;
-  border: 1px solid #231f20;
-  background: #231f20;
+.mobileInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10vh;
 }
 
 .mobileBrand {
-  margin-top: 30%;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: var(--font-brand);
-  font-weight: 500;
+  font-size: 19px;
+  font-weight: 400;
   letter-spacing: 0;
+  color: #f2f2f2;
+  margin: 0 0 34px;
 }
 
 .mobileNav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 28px;
-  gap: 34px;
+  gap: 30px;
 }
 
 .mobileNavItem {
   font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
-  font-size: var(--font-nav);
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  line-height: 1.4;
-  color: #231f20;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  color: #fff;
 }
 
 .mobileNavItemLaunch {
   composes: mobileNavItem;
-}
-
-.mobileWelcome {
-  margin-top: auto;
-  padding-bottom: 15px;
-  font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
-  font-size: var(--font-welcome);
-  font-weight: 600;
-  letter-spacing: 0;
-  line-height: 1.3;
 }
 
 @media (min-width: 768px) {

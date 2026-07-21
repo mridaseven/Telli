@@ -62,11 +62,9 @@ export default function LandingPage() {
         </div>
       </div>
 
-      {/* Mobile — matches the Phonem mobile SVG (framed mockup) */}
+      {/* Mobile — dark page with centered brand + nav (from the PNG) */}
       <div className={styles.mobile}>
-        <div className={styles.mobileFrame}>
-          <div className={styles.menuButton} aria-hidden="true" />
-
+        <div className={styles.mobileInner}>
           <p className={styles.mobileBrand}>{BRAND}</p>
 
           <nav className={styles.mobileNav}>
@@ -76,8 +74,6 @@ export default function LandingPage() {
             <span className={styles.mobileNavItem}>Helpdesk</span>
             <span className={styles.mobileNavItem}>About us</span>
           </nav>
-
-          <p className={styles.mobileWelcome}>Welcome...</p>
         </div>
       </div>
     </div>
