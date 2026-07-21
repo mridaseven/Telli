@@ -37,7 +37,9 @@
   white-space: nowrap;
   text-align: center;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;}
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0.16px 0 0 currentColor, -0.16px 0 0 currentColor;
+}
 
 .titleBold {
   font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
@@ -95,7 +97,9 @@
   color: #010101;
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;}
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0.16px 0 0 currentColor, -0.16px 0 0 currentColor;
+}
 
 .listItemSelected {
   background: #f2f2f2;
@@ -166,12 +170,12 @@
 
 .navUnderlinePrev {
   width: calc(57px * var(--s));
-  height: 2px;
+  height: 2.5px;
 }
 
 .navUnderlineNext {
   width: calc(60.27px * var(--s));
-  height: 2px;
+  height: 2.5px;
 }
 
 .navDivider {
@@ -227,7 +231,9 @@
   font-weight: 400;
   letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;}
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0.16px 0 0 currentColor, -0.16px 0 0 currentColor;
+}
 
 .mobileTitleBold {
   font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
@@ -261,7 +267,9 @@
   cursor: pointer;
   position: relative;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;}
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0.16px 0 0 currentColor, -0.16px 0 0 currentColor;
+}
 
 .mobileListItemSelected {
   background: #f3f3f3;
