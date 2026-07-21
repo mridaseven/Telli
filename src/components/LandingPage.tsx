@@ -22,18 +22,20 @@ export default function LandingPage() {
             {BRAND}
           </span>
 
-          <span
+          <Link
+            href="/helpdesk"
             className={styles.navHelp}
             style={{ left: sc(1575.69), top: sc(79.43 - 19) }}
           >
             Helpdesk&nbsp;&nbsp;|
-          </span>
-          <span
+          </Link>
+          <Link
+            href="/about"
             className={styles.navAbout}
             style={{ left: sc(1709.34), top: sc(80.43 - 19) }}
           >
             About us
-          </span>
+          </Link>
 
           <h1
             className={styles.headline}
@@ -71,8 +73,12 @@ export default function LandingPage() {
             <Link href="/select" className={styles.mobileNavItemLaunch}>
               | Launch
             </Link>
-            <span className={styles.mobileNavItem}>Helpdesk</span>
-            <span className={styles.mobileNavItem}>About us</span>
+            <Link href="/helpdesk" className={styles.mobileNavItem}>
+              Helpdesk
+            </Link>
+            <Link href="/about" className={styles.mobileNavItem}>
+              About us
+            </Link>
           </nav>
         </div>
       </div>
