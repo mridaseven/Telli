@@ -194,16 +194,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px 90px;
-  min-height: 100vh;
+  padding: 24px 20px;
+  height: 100vh;
+  overflow: hidden;
   background: #fff;
   color: #010101;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 
-  --font-title: clamp(17px, 4.7vw, 21px);
-  --font-body: clamp(17px, 4.8vw, 21px);
+  --font-title: clamp(16px, 4.6vw, 20px);
+  --font-body: clamp(15px, 4.3vw, 19px);
   --font-label: 13px;
   --font-nav: clamp(15px, 4.2vw, 18px);
 }
@@ -212,6 +213,8 @@
   width: fit-content;
   max-width: 88vw;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .mobileHeader {
@@ -246,18 +249,18 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-top: clamp(28px, 6vw, 44px);
+  margin-top: clamp(18px, 3.5vw, 30px);
 }
 
 .mobileListItem {
   font-family: Arial, Helvetica, sans-serif;
   font-size: var(--font-body);
   line-height: 1;
-  min-height: calc(var(--font-body) + 14px);
+  min-height: calc(var(--font-body) + 9px);
   display: flex;
   align-items: center;
   padding: 0 0 0 12px;
-  margin-bottom: clamp(6px, 1.4vw, 10px);
+  margin-bottom: clamp(3px, 0.9vw, 6px);
   cursor: pointer;
   position: relative;
   -webkit-text-stroke: 0.3px #010101;
@@ -280,9 +283,8 @@
 }
 
 .mobileNav {
-  position: fixed;
-  bottom: 22px;
-  right: 20px;
+  align-self: flex-end;
+  margin-top: clamp(20px, 4vw, 32px);
   font-family: "Myriad Pro", Myriad, Arial, sans-serif;
   font-size: var(--font-nav);
   display: flex;
