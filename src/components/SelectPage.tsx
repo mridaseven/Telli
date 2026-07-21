@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import {
   IPHONE_MODELS_MOBILE,
   COLORS_MOBILE,
@@ -11,15 +13,14 @@ import {
 } from "@/lib/data";
 import styles from "./SelectPage.module.css";
 
-type MobileStep = "model" | "color" | "capacity" | "checkout";
+type MobileStep = "model" | "color" | "capacity";
 
-const MOBILE_STEPS: MobileStep[] = ["model", "color", "capacity", "checkout"];
+const MOBILE_STEPS: MobileStep[] = ["model", "color", "capacity"];
 
 const STEP_TITLES: Record<MobileStep, { regular: string; bold: string }> = {
   model: { regular: "Select ", bold: "iPhone" },
   color: { regular: "Select ", bold: "Color" },
   capacity: { regular: "Select ", bold: "Capacity" },
-  checkout: { regular: "Check", bold: "out" },
 };
 
 /* Desktop select-page data (labels from "Telli select page.svg"). */
@@ -62,30 +63,24 @@ export default function SelectPage() {
     DEFAULT_SELECTION_MOBILE
   );
   const [mobileStep, setMobileStep] = useState<MobileStep>("model");
-  const [form, setForm] = useState({
-    name: "",
-    address: "",
-    postalCode: "",
-    city: "",
-    email: "",
-  });
+  const router = useRouter();
 
   const mobileStepIndex = MOBILE_STEPS.indexOf(mobileStep);
 
   const goNext = () => {
     if (mobileStepIndex < MOBILE_STEPS.length - 1) {
       setMobileStep(MOBILE_STEPS[mobileStepIndex + 1]);
+    } else {
+      router.push("/checkout");
     }
   };
 
   const goPrev = () => {
     if (mobileStepIndex > 0) {
       setMobileStep(MOBILE_STEPS[mobileStepIndex - 1]);
+    } else {
+      router.push("/");
     }
-  };
-
-  const updateForm = (field: keyof typeof form, value: string) => {
-    setForm((prev) => ({ ...prev, [field]: value }));
   };
 
   const renderDesktopColumn = (
@@ -135,91 +130,16 @@ export default function SelectPage() {
           />
         </a>
         <span className={styles.navDivider} aria-hidden="true" />
-        <button type="button" className={styles.navBtn}>
+        <Link href="/checkout" className={styles.navBtn}>
           <span className={styles.navLabel}>Next</span>
           <span
             className={`${styles.navUnderline} ${styles.navUnderlineNext}`}
             aria-hidden="true"
           />
-        </button>
+        </Link>
       </nav>
     </>
   );
-
-  const renderCheckoutForm = (isMobile: boolean) => {
-    const fieldClass = isMobile ? styles.mobileFormField : styles.formField;
-    const labelClass = isMobile ? styles.mobileFormLabel : styles.formLabel;
-    const inputClass = isMobile ? styles.mobileFormInput : styles.formInput;
-
-    return (
-      <>
-        <div className={fieldClass}>
-          <label className={labelClass}>Type in name...</label>
-          <input
-            className={inputClass}
-            type="text"
-            value={form.name}
-            onChange={(e) => updateForm("name", e.target.value)}
-          />
-        </div>
-
-        <div className={isMobile ? styles.mobileFormRow : styles.formRow}>
-          <div className={fieldClass}>
-            <label className={labelClass}>Type in adress...</label>
-            <input
-              className={inputClass}
-              type="text"
-              value={form.address}
-              onChange={(e) => updateForm("address", e.target.value)}
-            />
-          </div>
-          <div
-            className={
-              isMobile ? fieldClass : `${fieldClass} ${styles.formFieldNarrow}`
-            }
-          >
-            <label className={labelClass}>Type in Postalcode...</label>
-            <input
-              className={inputClass}
-              type="text"
-              value={form.postalCode}
-              onChange={(e) => updateForm("postalCode", e.target.value)}
-            />
-          </div>
-          <div
-            className={
-              isMobile ? fieldClass : `${fieldClass} ${styles.formFieldNarrow}`
-            }
-          >
-            <label className={labelClass}>Type in City......</label>
-            <input
-              className={inputClass}
-              type="text"
-              value={form.city}
-              onChange={(e) => updateForm("city", e.target.value)}
-            />
-          </div>
-        </div>
-
-        <div className={fieldClass}>
-          <label className={labelClass}>Type in emailadress...</label>
-          <input
-            className={inputClass}
-            type="email"
-            value={form.email}
-            onChange={(e) => updateForm("email", e.target.value)}
-          />
-        </div>
-
-        <button
-          type="button"
-          className={isMobile ? styles.mobileSend : styles.sendButton}
-        >
-          Send
-        </button>
-      </>
-    );
-  };
 
   const renderMobileList = (
     items: readonly string[],
@@ -252,59 +172,32 @@ export default function SelectPage() {
       {/* Mobile */}
       <div className={styles.mobile}>
         <div className={styles.mobileStage}>
-          {mobileStep !== "checkout" ? (
-            <>
-              <header className={styles.mobileHeader}>
-                <h2 className={styles.mobileTitle}>
-                  <span>{STEP_TITLES[mobileStep].regular}</span>
-                  <span className={styles.mobileTitleBold}>
-                    {STEP_TITLES[mobileStep].bold}
-                  </span>
-                </h2>
-                <div className={styles.mobileTitleUnderline} />
-              </header>
+          <header className={styles.mobileHeader}>
+            <h2 className={styles.mobileTitle}>
+              <span>{STEP_TITLES[mobileStep].regular}</span>
+              <span className={styles.mobileTitleBold}>
+                {STEP_TITLES[mobileStep].bold}
+              </span>
+            </h2>
+            <div className={styles.mobileTitleUnderline} />
+          </header>
 
-              {mobileStep === "model" &&
-                renderMobileList(IPHONE_MODELS_MOBILE, "model")}
-              {mobileStep === "color" &&
-                renderMobileList(COLORS_MOBILE, "color")}
-              {mobileStep === "capacity" &&
-                renderMobileList(CAPACITIES_MOBILE, "capacity")}
-            </>
-          ) : (
-            <section className={styles.mobileCheckout}>
-              <header className={styles.mobileHeader}>
-                <h2 className={styles.mobileTitle}>
-                  <span>Checkout</span>
-                </h2>
-                <div className={styles.mobileTitleUnderline} />
-              </header>
-              {renderCheckoutForm(true)}
-            </section>
-          )}
+          {mobileStep === "model" &&
+            renderMobileList(IPHONE_MODELS_MOBILE, "model")}
+          {mobileStep === "color" && renderMobileList(COLORS_MOBILE, "color")}
+          {mobileStep === "capacity" &&
+            renderMobileList(CAPACITIES_MOBILE, "capacity")}
         </div>
 
-        {mobileStep !== "checkout" ? (
-          <nav className={styles.mobileNav}>
-            <button
-              type="button"
-              onClick={goPrev}
-              disabled={mobileStepIndex === 0}
-            >
-              Prev
-            </button>
-            <span className={styles.mobileNavDivider}>|</span>
-            <button type="button" onClick={goNext}>
-              Next
-            </button>
-          </nav>
-        ) : (
-          <nav className={styles.mobileNav}>
-            <button type="button" onClick={goPrev}>
-              Prev
-            </button>
-          </nav>
-        )}
+        <nav className={styles.mobileNav}>
+          <button type="button" onClick={goPrev}>
+            Prev
+          </button>
+          <span className={styles.mobileNavDivider}>|</span>
+          <button type="button" onClick={goNext}>
+            Next
+          </button>
+        </nav>
       </div>
     </div>
   );
