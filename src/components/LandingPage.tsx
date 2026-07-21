@@ -33,7 +33,7 @@ export default function LandingPage() {
 
         <h1
           className={styles.headline}
-          style={{ left: sc(170.25), top: sc(395.08 - 43.4) }}
+          style={{ left: sc(170.25), top: sc(395.08 - 43.4 + 60) }}
         >
           As good as new. As simple as it gets.
         </h1>
@@ -41,7 +41,7 @@ export default function LandingPage() {
         <Link
           href="/select"
           className={styles.launch}
-          style={{ left: sc(177.02), top: sc(464.65 - 22.3) }}
+          style={{ left: sc(177.02), top: sc(464.65 - 22.3 + 60) }}
         >
           Launch
         </Link>
@@ -49,7 +49,7 @@ export default function LandingPage() {
           className={styles.launchLine}
           style={{
             left: sc(173.92),
-            top: sc(473.08),
+            top: sc(473.08 + 60),
             width: sc(98.22),
             height: sc(3.08),
           }}
