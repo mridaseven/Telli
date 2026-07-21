@@ -113,6 +113,14 @@
   background: #010101;
 }
 
+/* Models/color columns can land on fractional pixels, softening their
+   3px bars; a tiny horizontal shadow fills the anti-aliased edge so all
+   three selection bars look equally solid (like capacity). */
+.colModels .bar,
+.colColors .bar {
+  box-shadow: 0.6px 0 0 #010101;
+}
+
 .cellText {
   display: inline-block;
 }
