@@ -113,13 +113,6 @@
   background: #010101;
 }
 
-/* Models and color bars render a touch thinner than capacity's on some
-   displays; bump them so all three selection bars look equally thick. */
-.colModels .bar,
-.colColors .bar {
-  width: 4px;
-}
-
 .cellText {
   display: inline-block;
 }
