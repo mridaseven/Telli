@@ -74,16 +74,17 @@
   background: #fff;
 }
 
-/* ── Mobile (dark page, centered brand + nav — from the PNG) ── */
+/* ── Mobile (black page, centered brand + nav — from the PNG) ── */
 .mobile {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background: #231f20;
+  height: 100vh;
+  background: #000;
   color: #fff;
   padding: 0 24px;
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
