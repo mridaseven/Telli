@@ -19,7 +19,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 
-  --s: clamp(0.46, calc((100vw - 96px) / 1853.96px), 0.6);
+  --s: clamp(0.5, calc((100vw - 96px) / 1853.96px), 0.66);
 }
 
 .selectWrap {
