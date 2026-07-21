@@ -35,10 +35,7 @@
   font-size: calc(24px * var(--s));
   line-height: 1;
   white-space: nowrap;
-  text-align: center;
-  -webkit-text-stroke: 0.25px #010101;
-  paint-order: stroke fill;
-}
+  text-align: center;}
 
 .titleBold {
   font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
@@ -94,10 +91,7 @@
   line-height: 1;
   white-space: nowrap;
   color: #010101;
-  cursor: pointer;
-  -webkit-text-stroke: 0.25px #010101;
-  paint-order: stroke fill;
-}
+  cursor: pointer;}
 
 .listItemSelected {
   background: #f2f2f2;
@@ -158,10 +152,7 @@
   font-size: calc(24px * var(--s));
   line-height: 1;
   transform: scaleX(1.1);
-  transform-origin: left center;
-  -webkit-text-stroke: 0.3px #010101;
-  paint-order: stroke fill;
-}
+  transform-origin: left center;}
 
 .navUnderline {
   display: block;
@@ -230,10 +221,7 @@
   color: #010101;
   margin: 0;
   font-weight: 400;
-  letter-spacing: 0.01em;
-  -webkit-text-stroke: 0.3px #010101;
-  paint-order: stroke fill;
-}
+  letter-spacing: 0.01em;}
 
 .mobileTitleBold {
   font-family: "Arial Rounded MT Bold", "Arial Rounded MT", Arial, sans-serif;
@@ -264,10 +252,7 @@
   padding: 0 0 0 12px;
   margin-bottom: clamp(3px, 0.9vw, 6px);
   cursor: pointer;
-  position: relative;
-  -webkit-text-stroke: 0.3px #010101;
-  paint-order: stroke fill;
-}
+  position: relative;}
 
 .mobileListItemSelected {
   background: #f3f3f3;
