@@ -251,35 +251,38 @@ export default function SelectPage() {
 
       {/* Mobile */}
       <div className={styles.mobile}>
-        {mobileStep !== "checkout" ? (
-          <>
-            <header className={styles.mobileHeader}>
-              <h2 className={styles.mobileTitle}>
-                <span>{STEP_TITLES[mobileStep].regular}</span>
-                <span className={styles.mobileTitleBold}>
-                  {STEP_TITLES[mobileStep].bold}
-                </span>
-              </h2>
-              <div className={styles.mobileTitleUnderline} />
-            </header>
+        <div className={styles.mobileStage}>
+          {mobileStep !== "checkout" ? (
+            <>
+              <header className={styles.mobileHeader}>
+                <h2 className={styles.mobileTitle}>
+                  <span>{STEP_TITLES[mobileStep].regular}</span>
+                  <span className={styles.mobileTitleBold}>
+                    {STEP_TITLES[mobileStep].bold}
+                  </span>
+                </h2>
+                <div className={styles.mobileTitleUnderline} />
+              </header>
 
-            {mobileStep === "model" &&
-              renderMobileList(IPHONE_MODELS_MOBILE, "model")}
-            {mobileStep === "color" && renderMobileList(COLORS_MOBILE, "color")}
-            {mobileStep === "capacity" &&
-              renderMobileList(CAPACITIES_MOBILE, "capacity")}
-          </>
-        ) : (
-          <section className={styles.mobileCheckout}>
-            <header className={styles.mobileHeader}>
-              <h2 className={styles.mobileTitle}>
-                <span>Checkout</span>
-              </h2>
-              <div className={styles.mobileTitleUnderline} />
-            </header>
-            {renderCheckoutForm(true)}
-          </section>
-        )}
+              {mobileStep === "model" &&
+                renderMobileList(IPHONE_MODELS_MOBILE, "model")}
+              {mobileStep === "color" &&
+                renderMobileList(COLORS_MOBILE, "color")}
+              {mobileStep === "capacity" &&
+                renderMobileList(CAPACITIES_MOBILE, "capacity")}
+            </>
+          ) : (
+            <section className={styles.mobileCheckout}>
+              <header className={styles.mobileHeader}>
+                <h2 className={styles.mobileTitle}>
+                  <span>Checkout</span>
+                </h2>
+                <div className={styles.mobileTitleUnderline} />
+              </header>
+              {renderCheckoutForm(true)}
+            </section>
+          )}
+        </div>
 
         {mobileStep !== "checkout" && (
           <nav className={styles.mobileNav}>
