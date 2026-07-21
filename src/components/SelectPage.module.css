@@ -162,7 +162,7 @@
 }
 
 .navUnderlinePrev {
-  width: calc(51.21px * var(--s));
+  width: calc(57px * var(--s));
   height: 3px;
 }
 
