@@ -194,7 +194,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 24px 20px;
+  padding: 24px 20px 72px;
   height: 100vh;
   overflow: hidden;
   background: #fff;
@@ -283,8 +283,9 @@
 }
 
 .mobileNav {
-  align-self: flex-end;
-  margin-top: clamp(20px, 4vw, 32px);
+  position: fixed;
+  right: 20px;
+  bottom: 22px;
   font-family: "Myriad Pro", Myriad, Arial, sans-serif;
   font-size: var(--font-nav);
   display: flex;
